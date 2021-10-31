@@ -6,25 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('page-title') | Traveler</title>
-    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="icon" type="image/png" src="/images/favicon.png">
     <!-- ==================Start Css Link===================== -->
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="/css/animate.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/datepicker.min.css">
-    <link rel="stylesheet" href="/css/OverlayScrollbars.min.css">
-    <link rel="stylesheet" href="/css/fontawesome.css">
-    <link rel="stylesheet" href="/css/icofont.css">
-    <link rel="stylesheet" href="/css/magnific-popup.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/slick.css">
-    <link rel="stylesheet" href="/css/slick-theme.css">
-    <link rel="stylesheet" href="/css/slider-range.css">
-    <link rel="stylesheet" href="/css/select2.min.css">
-    <link rel="stylesheet" href="/css/tippy.css">
-    <link rel="stylesheet" href="/css/app.css">
+    <link href="{{ asset('/css/animate.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/animate.css">--}}
+    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/bootstrap.min.css">--}}
+    <link href="{{ asset('/css/datepicker.min.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/datepicker.min.css">--}}
+    <link href="{{ asset('/css/OverlayScrollbars.min.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/OverlayScrollbars.min.css">--}}
+
+    <link href="{{ asset('/css/fontawesome.css') }}" rel="stylesheet">
+
+{{--    <link rel="stylesheet" href="/css/fontawesome.css">--}}
+    <link href="{{ asset('/css/icofont.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/icofont.css">--}}
+    <link href="{{ asset('/css/magnific-popup.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/magnific-popup.css">--}}
+    <link href="{{ asset('/css/owl.theme.default.min.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/owl.theme.default.min.css">--}}
+    <link href="{{ asset('/css/owl.carousel.min.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/owl.carousel.min.css">--}}
+    <link href="{{ asset('/css/slick.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/slick.css">--}}
+    <link href="{{ URL::asset('/css/slick-theme.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/slick-theme.css">--}}
+    <link href="{{ URL::asset('/css/slider-range.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/slider-range.css">--}}
+    <link href="{{ URL::asset('/css/select2.min.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/select2.min.css">--}}
+    <link href="{{ URL::asset('/css/tippy.css') }}" rel="stylesheet">
+{{--    <link rel="stylesheet" href="/css/tippy.css">--}}
+    <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+{{--    <link rel="stylesheet" href="/css/app.css">--}}
     <!-- ==================End Css Link===================== -->
 
 
@@ -46,7 +63,7 @@
 
 <div class="rt-preloder">
     <div class="preloder-box">
-        <img src="/images/all-img/preloder.svg" alt="preloder image" draggable="false">
+        <img src="public/images/all-img/preloder.svg" alt="preloder image" draggable="false">
     </div><!-- /.preloder-box -->
 </div><!-- /.rt-preloder -->
 
@@ -397,32 +414,80 @@
 
 
 <!-- ==================Start Js Link===================== -->
-<script src="/js/jquery-2.2.4.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/moment.min.js"></script>
-<script src="/js/jquery.easing.1.3.js"></script>
-<script src="/js/imagesloaded.pkgd.min.js"></script>
-<script src="/js/isotope.pkgd.min.js"></script>
-<script src="/js/instafeed.min.js"></script>
-<script src="/js/waypoints.min.js"></script>
-<script src="/js/jquery.counterup.min.js"></script>
-<script src="/js/jquery.magnific-popup.min.js"></script>
-<script src="/js/jquery.scrollUp.min.js"></script>
-<script src="/js/owl.carousel.min.js"></script>
-<script src="/js/TweenMax.min.js"></script>
-<script src="/js/scrollax.min.js"></script>
+<script src="{{ asset('/js/jquery-2.2.4.min.js') }}" defer></script>
+
+{{--<script src="/js/jquery-2.2.4.min.js"></script>--}}
+<script src="{{ asset('/js/popper.min.js') }}" defer></script>
+
+{{--<script src="/js/popper.min.js"></script>--}}
+<script src="{{ asset('/js/bootstrap.min.js') }}" defer></script>
+
+{{--<script src="/js/bootstrap.min.js"></script>--}}
+<script src="{{ asset('/js/moment.min.js') }}" defer></script>
+
+{{--<script src="/js/moment.min.js"></script>--}}
+<script src="{{ asset('/js/jquery.easing.1.3.js') }}" defer></script>
+
+{{--<script src="/js/jquery.easing.1.3.js"></script>--}}
+<script src="{{ asset('/js/imagesloaded.pkgd.min.js') }}" defer></script>
+
+{{--<script src="/js/imagesloaded.pkgd.min.js"></script>--}}
+{{--<script src="/js/isotope.pkgd.min.js"></script>--}}
+<script src="{{ asset('/js/instafeed.min.js') }}" defer></script>
+
+{{--<script src="/js/instafeed.min.js"></script>--}}
+<script src="{{ asset('/js/waypoints.min.js') }}" defer></script>
+
+{{--<script src="/js/waypoints.min.js"></script>--}}
+<script src="{{ asset('/js/jquery.counterup.min.js') }}" defer></script>
+{{--<script src="/js/jquery.counterup.min.js"></script>--}}
+<script src="{{ asset('/js/jquery.magnific-popup.min.js') }}" defer></script>
+
+{{--<script src="/js/jquery.magnific-popup.min.js"></script>--}}
+<script src="{{ asset('/js/jquery.scrollUp.min.js') }}" defer></script>
+
+{{--<script src="/js/jquery.scrollUp.min.js"></script>--}}
+<script src="{{ asset('/js/owl.carousel.min.js') }}" defer></script>
+
+{{--<script src="/js/owl.carousel.min.js"></script>--}}
+<script src="{{ asset('/js/TweenMax.min.js') }}" defer></script>
+
+{{--<script src="/js/TweenMax.min.js"></script>--}}
+<script src="{{ asset('/js/scrollax.min.js') }}" defer></script>
+
+{{--<script src="/js/scrollax.min.js"></script>--}}
+<script src="{{ asset('/js/wow.js') }}" defer></script>
+
 <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCy7becgYuLwns3uumNm6WdBYkBpLfy44k"></script>
-<script src="/js/wow.js"></script>
-<script src="/js/jquery.overlayScrollbars.min.js"></script>
-<script src="/js/jquery-ui.js"></script>
-<script src="/js/jquery.appear.js"></script>
-<script src="/js/select2.min.js"></script>
-<script src="/js/slick.min.js"></script>
-<script src="/js/slider-range.js"></script>
-<script src="/js/vivus.min.js"></script>
-<script src="/js/tippy.all.min.js"></script>
-<script src="/js/app.js"></script>
+{{--<script src="/js/wow.js"></script>--}}
+<script src="{{ asset('/js/jquery.overlayScrollbars.min.js') }}" defer></script>
+
+{{--<script src="/js/jquery.overlayScrollbars.min.js"></script>--}}
+<script src="{{ asset('/js/jquery-ui.js') }}" defer></script>
+
+
+{{--<script src="/js/jquery-ui.js"></script>--}}
+<script src="{{ asset('/js/jquery.appear.js') }}" defer></script>
+
+{{--<script src="/js/jquery.appear.js"></script>--}}
+<script src="{{ asset('/js/select2.min.js') }}" defer></script>
+
+{{--<script src="/js/select2.min.js"></script>--}}
+<script src="{{ asset('/js/slick.min.js') }}" defer></script>
+
+{{--<script src="/js/slick.min.js"></script>--}}
+<script src="{{ asset('/js/slider-range.js') }}" defer></script>
+
+{{--<script src="/js/slider-range.js"></script>--}}
+<script src="{{ asset('/js/vivus.min.js') }}" defer></script>
+
+{{--<script src="/js/vivus.min.js"></script>--}}
+<script src="{{ asset('/js/tippy.all.min.js') }}" defer></script>
+
+{{--<script src="/js/tippy.all.min.js"></script>--}}
+<script src="{{ asset('/js/app.js') }}" defer></script>
+
+{{--<script src="/js/app.js"></script>--}}
 
 <!-- ==================End Js Link===================== -->
 
