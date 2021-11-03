@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap');
+
+.serachnavs li a {
+    width: 135px;
+}
+
+.rt-banner-searchbox {
+    height: 129px;
+    font-size: 20px !important;
+}
+.serachnavs li a {
+    font-size: 16px;
+}
+
+.serachnavs li a i {
+    margin-top: 6px;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, pre, a, button {
+    font-family: 'Source Sans Pro';
+}
+
+.single-rt-banner .rt-banner-content h1 {
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+
+*:focus, *:active {
+    box-shadow: none;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    border: none;
+}
+
+label[for] {
+    cursor: pointer;
+}
+
+.fly-form {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 5px 14px rgba(0,0,0,.05);
+}
+
+.fly-form input {
+    border: 2px solid rgba(0,0,0,.01);
+    border-radius: 8px;
+    height: 40px;
+    font-size: 16px;
+    padding-left: 10px;
+    box-shadow: 0px 5px 14px rgba(0,0,0,.05);
+}
+
+.fly-form input:active, .fly-form input:focus {
+    box-shadow: 0px 5px 14px rgba(0,0,0,.05) !important;
+}
+
+.effect-input {
+    transition: .6s ease;
+}
+
+.effect-input.hide {
+    opacity: 0;
+}
+
+.hide {
+    display: none !important;
+    transition: .6s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.msg {
+    margin-left: -20px;
+    background: url('/images/msg.svg');
+    background-size: cover;
+    font-size: 16px;
+    color: #fff;
+    min-width: 400px;
+    min-height: 50px;
+    border-radius: 30px;
+    /*transform: scale(.9);*/
+    margin-top: 0px;
+    padding: 0 50px 0 50px;
+    display: flex;
+    align-items: center;
+}
+/*.msg:after {*/
+/*    content: ' ';*/
+/*    height: 68px;*/
+/*    width: 210px;*/
+/*    background: url("/images/msgborder.svg");*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    position: absolute;*/
+/*    z-index: -1;*/
+/*    margin-left: -244px;*/
+/*    margin-top: -34px;*/
+/*}*/

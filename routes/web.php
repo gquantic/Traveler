@@ -13,20 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main');
+Route::get('/', function (\App\Http\Controllers\CityController $cityController) {
+    return view('main', ['cityController' => $cityController]);
 });
 
-Route::get('/flight/{from}/{to}/{depart}/{return}', function (\App\Http\Controllers\TravelController $travel, $from, $to, $depart, $return) {
+Route::get('/make-road/{from}/{more}', function (\App\Http\Controllers\TravelController $travel,
+                                                 App\Http\Controllers\CityController $cityController, $from, $more) {
     $price = $travel->setPrice("plane", 15000);
-    return view('flight');
+    return view('flight', ['data' => [$from, $more], 'cityController' => $cityController]);
 });
 
-Route::post('/make', function (\App\Http\Controllers\TravelController $travel) {
-    $_POST['depart'] = str_replace('/', '-', $_POST['depart']);
-    $_POST['return'] = str_replace('/', '-', $_POST['return']);
+Route::post('/order', function (\App\Http\Controllers\TravelController $travel, App\Http\Controllers\CityController $cityController) {
+    if (isset($_POST['moreInfo']) && $_POST['moreInfo'] == "true") $moreInfo = true;
+    elseif (!isset($_POST['moreInfo']) || $_POST['moreInfo'] != "true") $moreInfo = false;
 
-    return redirect("/flight/{$_POST['from']}/{$_POST['to']}/{$_POST['depart']}/{$_POST['return']}");
+    return view('form-order', ['cityController' => $cityController, 'data' => [$_POST['from'], $moreInfo]]);
 })->name('make-road');
-
-

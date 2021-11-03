@@ -6,46 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('page-title') | Traveler</title>
-    <link rel="icon" type="image/png" src="/images/favicon.png">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
     <!-- ==================Start Css Link===================== -->
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-    <link href="{{ asset('/css/animate.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/animate.css">--}}
-    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/bootstrap.min.css">--}}
-    <link href="{{ asset('/css/datepicker.min.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/datepicker.min.css">--}}
-    <link href="{{ asset('/css/OverlayScrollbars.min.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/OverlayScrollbars.min.css">--}}
-
-    <link href="{{ asset('/css/fontawesome.css') }}" rel="stylesheet">
-
-{{--    <link rel="stylesheet" href="/css/fontawesome.css">--}}
-    <link href="{{ asset('/css/icofont.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/icofont.css">--}}
-    <link href="{{ asset('/css/magnific-popup.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/magnific-popup.css">--}}
-    <link href="{{ asset('/css/owl.theme.default.min.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/owl.theme.default.min.css">--}}
-    <link href="{{ asset('/css/owl.carousel.min.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/owl.carousel.min.css">--}}
-    <link href="{{ asset('/css/slick.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/slick.css">--}}
-    <link href="{{ URL::asset('/css/slick-theme.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/slick-theme.css">--}}
-    <link href="{{ URL::asset('/css/slider-range.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/slider-range.css">--}}
-    <link href="{{ URL::asset('/css/select2.min.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/select2.min.css">--}}
-    <link href="{{ URL::asset('/css/tippy.css') }}" rel="stylesheet">
-{{--    <link rel="stylesheet" href="/css/tippy.css">--}}
-    <link href="{{ URL::asset('css/app.css') }}" rel="stylesheet" type="text/css" >
-{{--    <link rel="stylesheet" href="/css/app.css">--}}
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/datepicker.min.css">
+    <link rel="stylesheet" href="/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="/css/fontawesome.css">
+    <link rel="stylesheet" href="/css/icofont.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/slick-theme.css">
+    <link rel="stylesheet" href="/css/slider-range.css">
+    <link rel="stylesheet" href="/css/select2.min.css">
+    <link rel="stylesheet" href="/css/tippy.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/self.css">
     <!-- ==================End Css Link===================== -->
-
-
-
 
     <!--[if lt IE 9]>
     <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -63,7 +44,7 @@
 
 <div class="rt-preloder">
     <div class="preloder-box">
-        <img src="public/images/all-img/preloder.svg" alt="preloder image" draggable="false">
+        <img src="/images/all-img/preloder.svg" alt="preloder image" draggable="false">
     </div><!-- /.preloder-box -->
 </div><!-- /.rt-preloder -->
 
@@ -73,22 +54,22 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <ul class="text-center text-md-left top-message">
-                        <li> <i class="icofont-headphone-alt"></i>Support</li>
-                        <li><a href="mailto:info@emigrar.com "><i class="icofont-email"></i>info@emigrar.com</a></li>
+                        <li><i class="icofont-headphone-alt"></i>Поддержка</li>
+                        <li><a href="mailto:info@emigrar.com "><i class="icofont-email"></i>info@ecutravel.ru</a></li>
                     </ul>
                 </div><!-- end top header single -->
                 <div class="col-md-6">
                     <ul class="text-center text-md-right top-social">
                         <li><a href="#" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
-                               aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe-americas"></i>Englishs</a>
+                               aria-haspopup="true" aria-expanded="false"><i class="fas fa-globe-americas"></i>Русский</a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="#">English</a>
                                 <a class="dropdown-item" href="#">French</a>
                                 <a class="dropdown-item" href="#">Trukis</a>
                             </div>
                         </li>
-                        <li><a href="#"><i class="fas fa-briefcase"></i>My Trips</a></li>
-                        <li><a href="#" data-target="#rtmodal-1" data-toggle="modal"><i class="far fa-user-circle"></i>Sign in | Join</a></li>
+                        <li><a href="#"><i class="fas fa-briefcase"></i>Мои туры</a></li>
+                        <li><a href="#" data-target="#rtmodal-1" data-toggle="modal"><i class="far fa-user-circle"></i>Войти в кабинет</a></li>
                     </ul>
                 </div><!-- end top header single -->
             </div>
@@ -106,71 +87,10 @@
 
                     <div class="main-menu">
                         <ul>
-                            <li class="current-menu-item"><a href="#home">Home</a></li>
-                            <li><a href="trip-1.html">Trip package</a></li>
-                            <li><a href="service-1.html">Services</a></li>
-                            <li class="menu-item-has-children"><a href="#">Pages</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item-has-children"><a href="#">Home Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="index.html">Home One</a></li>
-                                            <li><a href="index-02.html">Home Two</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children"><a href="#">Hotel Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="hotel-1.html">Hotel One</a></li>
-                                            <li><a href="hotel-2.html">Hotel Two</a></li>
-                                            <li><a href="hotel-3.html">Hotel Three</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children"><a href="#">Flight Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="flight-1.html">Flight One</a></li>
-                                            <li><a href="flight-details.html">Flight Two</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children"><a href="#">train Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="train-1.html">train One</a></li>
-                                            <li><a href="train-2.html">train Two</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children"><a href="#">trip Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="trip-1.html">trip One</a></li>
-                                            <li><a href="trip-2.html">trip Two</a></li>
-                                            <li><a href="trip-3.html">trip Three</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children"><a href="#">car Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="car-1.html">car One</a></li>
-                                            <li><a href="car-2.html">car Two</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children"><a href="#">blog Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="blog.html">blog</a></li>
-                                            <li><a href="blog-grid.html">blog-grid</a></li>
-                                            <li><a href="single-blog.html">blog-single 1</a></li>
-                                            <li><a href="singleblog-lsidebar.html">blog-single 2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children"><a href="#">Others Pages</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="service-1.html">service</a></li>
-                                            <li><a href="afflite.html">afflite</a></li>
-                                            <li><a href="help.html">help</a></li>
-                                            <li><a href="how-work.html">how-work</a></li>
-                                            <li><a href="contact.html">contact</a></li>
-                                            <li><a href="404.html">404</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li> <a href="blog.html">Blog</a></li>
+                            <li class="current-menu-item"><a href="">Главная</a></li>
+                            <li><a href="">Связь с нами</a></li>
+                            <li><a href="">Составные билеты</a></li>
+                            <li><a href="">Блог</a></li>
 
                         </ul>
                         <div class="mobile-menu">
@@ -182,8 +102,7 @@
                         </div>
                     </div><!-- end main menu -->
                     <div class="rt-nav-tolls d-flex align-items-center">
-    <span class="d-md-inline d-none"><a href="contact.html" class="rt-btn rt-gradient2 rt-rounded text-uppercase rt-Bshadow-1">Contact
-            Us</a></span>
+    <span class="d-md-inline d-none"><a href="contact.html" class="rt-btn rt-gradient2 rt-rounded text-uppercase rt-Bshadow-1">Мой профиль</a></span>
                     </div>
 
                 </div>
@@ -285,13 +204,11 @@
                     <div class="col-xl-8 col-lg-10 mx-auto text-center">
                         <div class="rt-section-title-wrapper text-white">
                             <h2 class="rt-section-title">
-                                <span>Newsletter</span>
-
-                                Get The Latest news
+                                <span>Наша рассылка</span>
+                                Новостей и акций
                             </h2><!-- /.rt-section-title -->
                             <p>
-                                Get the latest travel inspirations and deals from Emigrar semimonthly with your email. You can
-                                unsubscribe at any time. Your privacy & personal information will be treated.
+                                Подпишитесь, чтобы быть в курсе последних новостией и акций!
                             </p>
                         </div><!-- /.rt-section-title-wrapper -->
                     </div><!-- /.col-lg-7 -->
@@ -302,7 +219,7 @@
                         <div class="input-group mb-5">
                             <input type="text" class="form-control" placeholder="Enter your email address" aria-describedby="button-addon2">
                             <div class="input-group-append">
-                                <button class="btn" type="button" id="button-addon2">Subcribe Now</button>
+                                <button class="btn" type="button" id="button-addon2">Подписаться</button>
                             </div>
                         </div><!-- end input gorup -->
                     </div><!-- /.col-lg-7 -->
@@ -314,25 +231,25 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6">
                     <div class="rt-single-widget wow fade-in-bottom" data-wow-duration="1s">
-                        <h3 class="rt-footer-title">Company Info</h3><!-- /.rt-footer-title -->
+                        <h3 class="rt-footer-title">Информация</h3><!-- /.rt-footer-title -->
                         <ul class="rt-usefulllinks">
                             <li>
-                                <a href="#">About Us</a>
+                                <a href="#">О нас</a>
                             </li>
                             <li>
-                                <a href="#">Contact Us</a>
+                                <a href="#">Связаться с нами</a>
                             </li>
                             <li>
-                                <a href="#">Authenticity Guarantee</a>
+                                <a href="#">Гарантии</a>
                             </li>
                             <li>
-                                <a href="#">Customer Reviews</a>
+                                <a href="#">Условия использования</a>
                             </li>
                             <li>
-                                <a href="#">Privacy Policy</a>
+                                <a href="#">Конфедициальность</a>
                             </li>
                             <li>
-                                <a href="#">Business License</a>
+                                <a href="#">Лицензия</a>
                             </li>
 
                         </ul>
@@ -341,45 +258,43 @@
                 </div><!-- /.col-lg-3-->
                 <div class="col-lg-3 col-md-6">
                     <div class="rt-single-widget wow fade-in-bottom" data-wow-duration="1.5s">
-                        <h3 class="rt-footer-title">Work With Us</h3>
+                        <h3 class="rt-footer-title">Работайте с нами</h3>
                         <ul class="rt-usefulllinks">
-                            <li><a href="#">Become Partner</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Become Affiliate</a></li>
-                            <li><a href="#">Associations</a></li>
-                            <li><a href="#">Advertise with us</a></li>
-                            <li><a href="#">Retirement Plan</a></li>
-                            <li><a href="#">Travel APIs</a></li>
+                            <li><a href="#">Для партнеров</a></li>
+                            <li><a href="#">Вакансии</a></li>
+                            <li><a href="#">Инвесторам</a></li>
+                            <li><a href="#">Партнерская программа</a></li>
+                            <li><a href="#">Разработчикам</a></li>
                         </ul>
                     </div><!-- /.rt-single-widget -->
                 </div><!-- /.col-lg-3-->
                 <div class="col-lg-3 col-md-6">
                     <div class="rt-single-widget wow fade-in-bottom" data-wow-duration="2s">
                         <h3 class="rt-footer-title">
-                            My Account
+                            Профиль
                         </h3>
                         <ul class="rt-usefulllinks">
 
-                            <li><a href="#">Manage Your Account</a></li>
-                            <li><a href="#">Build your own trip</a></li>
-                            <li><a href="#">Order Sttatus</a></li>
-                            <li><a href="#">Booking Guide</a></li>
-                            <li><a href="#">Travel Insurance & Safety Guide</a></li>
+                            <li><a href="#">Просмотр</a></li>
+                            <li><a href="#">Мои акции</a></li>
+                            <li><a href="#">Статус заказа</a></li>
+                            <li><a href="#">Советы</a></li>
+                            <li><a href="#">История</a></li>
                         </ul><!-- /.rt-usefulllinks -->
                     </div><!-- end single widget -->
                 </div><!-- /.col-lg-3-->
                 <div class="col-lg-3 col-md-6">
                     <div class="rt-single-widget wow fade-in-bottom" data-wow-duration="2.5s">
                         <h3 class="rt-footer-title">
-                            Plan Your Trip
+                            Запланируйте поездку
                         </h3>
                         <ul class="rt-usefulllinks">
-                            <li><a href="#">Special Offers</a></li>
-                            <li><a href="#">Hotels</a></li>
-                            <li><a href="#">Flights</a></li>
-                            <li><a href="#">Tour Packages</a></li>
-                            <li><a href="#">Accommodations</a></li>
-                            <li><a href="#">Transportation</a></li>
+                            <li><a href="#">Отложенные билеты</a></li>
+                            <li><a href="#">Отели</a></li>
+                            <li><a href="#">Самолеты</a></li>
+                            <li><a href="#">Пакеты туров</a></li>
+                            <li><a href="#">Составные билеты</a></li>
+                            <li><a href="#">Перевозка</a></li>
                         </ul><!-- /.rt-usefulllinks -->
                     </div><!-- end single widget -->
                 </div><!-- /.col-lg-3-->
@@ -391,19 +306,19 @@
             <div class="row">
                 <div class="col-lg-6 text-center text-lg-left">
                     <div class="copy-text wow fade-in-bottom" data-wow-duration="1s">
-                        Copyright © 2018.All Rights Reserved By <a href="#">Emigrar</a>
+                        EcuTravel © 2018.All Все права защищены. Разработка <a href="https://t.me/gquantic">GQuantic</a>
                     </div><!-- /.copy-text -->
                 </div><!-- /.col-lg-6 -->
                 <div class="col-lg-6 text-center text-lg-right">
                     <div class="rt-footer-social wow fade-in-bottom" data-wow-duration="1.5s">
-                        <ul>
-                            <li><a href="#"><img src="/images/brands/card-1.png" alt="cardimage" draggable="false"></a></li>
-                            <li><a href="#"><img src="/images/brands/card-2.png" alt="cardimage" draggable="false"></a></li>
-                            <li><a href="#"><img src="/images/brands/card-3.png" alt="cardimage" draggable="false"></a></li>
-                            <li><a href="#"><img src="/images/brands/card-4.png" alt="cardimage" draggable="false"></a></li>
-                            <li><a href="#"><img src="/images/brands/card-5.png" alt="cardimage" draggable="false"></a></li>
+{{--                        <ul>--}}
+{{--                            <li><a href="#"><img src="/images/brands/card-1.png" alt="cardimage" draggable="false"></a></li>--}}
+{{--                            <li><a href="#"><img src="/images/brands/card-2.png" alt="cardimage" draggable="false"></a></li>--}}
+{{--                            <li><a href="#"><img src="/images/brands/card-3.png" alt="cardimage" draggable="false"></a></li>--}}
+{{--                            <li><a href="#"><img src="/images/brands/card-4.png" alt="cardimage" draggable="false"></a></li>--}}
+{{--                            <li><a href="#"><img src="/images/brands/card-5.png" alt="cardimage" draggable="false"></a></li>--}}
 
-                        </ul>
+{{--                        </ul>--}}
                     </div><!-- /.rt-footer-social -->
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row -->
@@ -414,80 +329,37 @@
 
 
 <!-- ==================Start Js Link===================== -->
-<script src="{{ asset('/js/jquery-2.2.4.min.js') }}" defer></script>
+<script src="/js/jquery-2.2.4.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/moment.min.js"></script>
+<script src="/js/jquery.easing.1.3.js"></script>
+<script src="/js/imagesloaded.pkgd.min.js"></script>
+<script src="/js/isotope.pkgd.min.js"></script>
+<script src="/js/instafeed.min.js"></script>
+<script src="/js/waypoints.min.js"></script>
+<script src="/js/jquery.counterup.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/jquery.scrollUp.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/TweenMax.min.js"></script>
+<script src="/js/scrollax.min.js"></script>
 
-{{--<script src="/js/jquery-2.2.4.min.js"></script>--}}
-<script src="{{ asset('/js/popper.min.js') }}" defer></script>
-
-{{--<script src="/js/popper.min.js"></script>--}}
-<script src="{{ asset('/js/bootstrap.min.js') }}" defer></script>
-
-{{--<script src="/js/bootstrap.min.js"></script>--}}
-<script src="{{ asset('/js/moment.min.js') }}" defer></script>
-
-{{--<script src="/js/moment.min.js"></script>--}}
-<script src="{{ asset('/js/jquery.easing.1.3.js') }}" defer></script>
-
-{{--<script src="/js/jquery.easing.1.3.js"></script>--}}
-<script src="{{ asset('/js/imagesloaded.pkgd.min.js') }}" defer></script>
-
-{{--<script src="/js/imagesloaded.pkgd.min.js"></script>--}}
-{{--<script src="/js/isotope.pkgd.min.js"></script>--}}
-<script src="{{ asset('/js/instafeed.min.js') }}" defer></script>
-
-{{--<script src="/js/instafeed.min.js"></script>--}}
-<script src="{{ asset('/js/waypoints.min.js') }}" defer></script>
-
-{{--<script src="/js/waypoints.min.js"></script>--}}
-<script src="{{ asset('/js/jquery.counterup.min.js') }}" defer></script>
-{{--<script src="/js/jquery.counterup.min.js"></script>--}}
-<script src="{{ asset('/js/jquery.magnific-popup.min.js') }}" defer></script>
-
-{{--<script src="/js/jquery.magnific-popup.min.js"></script>--}}
-<script src="{{ asset('/js/jquery.scrollUp.min.js') }}" defer></script>
-
-{{--<script src="/js/jquery.scrollUp.min.js"></script>--}}
-<script src="{{ asset('/js/owl.carousel.min.js') }}" defer></script>
-
-{{--<script src="/js/owl.carousel.min.js"></script>--}}
-<script src="{{ asset('/js/TweenMax.min.js') }}" defer></script>
-
-{{--<script src="/js/TweenMax.min.js"></script>--}}
-<script src="{{ asset('/js/scrollax.min.js') }}" defer></script>
-
-{{--<script src="/js/scrollax.min.js"></script>--}}
-<script src="{{ asset('/js/wow.js') }}" defer></script>
+<script src="https://atuin.ru/demo/jquery.bubble.text.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCy7becgYuLwns3uumNm6WdBYkBpLfy44k"></script>
-{{--<script src="/js/wow.js"></script>--}}
-<script src="{{ asset('/js/jquery.overlayScrollbars.min.js') }}" defer></script>
+<script src="/js/wow.js"></script>
+<script src="/js/jquery.overlayScrollbars.min.js"></script>
+<script src="/js/jquery-ui.js"></script>
+<script src="/js/jquery.appear.js"></script>
+<script src="/js/select2.min.js"></script>
+<script src="/js/slick.min.js"></script>
+<script src="/js/slider-range.js"></script>
+<script src="/js/vivus.min.js"></script>
+<script src="/js/tippy.all.min.js"></script>
+<script src="/js/app.js"></script>
 
-{{--<script src="/js/jquery.overlayScrollbars.min.js"></script>--}}
-<script src="{{ asset('/js/jquery-ui.js') }}" defer></script>
-
-
-{{--<script src="/js/jquery-ui.js"></script>--}}
-<script src="{{ asset('/js/jquery.appear.js') }}" defer></script>
-
-{{--<script src="/js/jquery.appear.js"></script>--}}
-<script src="{{ asset('/js/select2.min.js') }}" defer></script>
-
-{{--<script src="/js/select2.min.js"></script>--}}
-<script src="{{ asset('/js/slick.min.js') }}" defer></script>
-
-{{--<script src="/js/slick.min.js"></script>--}}
-<script src="{{ asset('/js/slider-range.js') }}" defer></script>
-
-{{--<script src="/js/slider-range.js"></script>--}}
-<script src="{{ asset('/js/vivus.min.js') }}" defer></script>
-
-{{--<script src="/js/vivus.min.js"></script>--}}
-<script src="{{ asset('/js/tippy.all.min.js') }}" defer></script>
-
-{{--<script src="/js/tippy.all.min.js"></script>--}}
-<script src="{{ asset('/js/app.js') }}" defer></script>
-
-{{--<script src="/js/app.js"></script>--}}
+<script src="{{ asset('/js/main.js') }}"></script>
 
 <!-- ==================End Js Link===================== -->
 
