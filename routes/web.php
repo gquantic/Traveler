@@ -23,9 +23,4 @@ Route::get('/make-road/{from}/{more}', function (\App\Http\Controllers\TravelCon
     return view('flight', ['data' => [$from, $more], 'cityController' => $cityController]);
 });
 
-Route::post('/order', function (\App\Http\Controllers\TravelController $travel, App\Http\Controllers\CityController $cityController) {
-    if (isset($_POST['moreInfo']) && $_POST['moreInfo'] == "true") $moreInfo = true;
-    elseif (!isset($_POST['moreInfo']) || $_POST['moreInfo'] != "true") $moreInfo = false;
-
-    return view('form-order', ['cityController' => $cityController, 'data' => [$_POST['from'], $moreInfo]]);
-})->name('make-road');
+Route::get('/order', [\App\Http\Controllers\TravelController::class, 'makeRoad'])->name('make-road');

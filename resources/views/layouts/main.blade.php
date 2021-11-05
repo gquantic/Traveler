@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('page-title') | Traveler</title>
+    <title>@yield('page-title') | Ecupay</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <!-- ==================Start Css Link===================== -->
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
@@ -204,11 +204,12 @@
                     <div class="col-xl-8 col-lg-10 mx-auto text-center">
                         <div class="rt-section-title-wrapper text-white">
                             <h2 class="rt-section-title">
-                                <span>Наша рассылка</span>
-                                Новостей и акций
+                                <span>УВЕДОМЛЕНИЯ</span>
+                                Свежие Идеи
                             </h2><!-- /.rt-section-title -->
                             <p>
-                                Подпишитесь, чтобы быть в курсе последних новостией и акций!
+                                Получайте предложения от EcuTravel на электронную почту. <br>
+                                Вы можете отказаться от подписки в любое время. Ваша конфиденциальность и личная информация будут защищены.
                             </p>
                         </div><!-- /.rt-section-title-wrapper -->
                     </div><!-- /.col-lg-7 -->
@@ -217,7 +218,7 @@
                 <div class="row">
                     <div class="col-lg-7 mx-auto">
                         <div class="input-group mb-5">
-                            <input type="text" class="form-control" placeholder="Enter your email address" aria-describedby="button-addon2">
+                            <input type="text" class="form-control" placeholder="Ваш email" aria-describedby="button-addon2">
                             <div class="input-group-append">
                                 <button class="btn" type="button" id="button-addon2">Подписаться</button>
                             </div>
