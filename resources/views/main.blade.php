@@ -75,12 +75,12 @@
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane show active" id="rt-item_a_first" role="tabpanel" aria-labelledby="rt-item_a_first">
                                         <form action="{{ route('make-road') }}" method="get" id="form-cards">
-                                        @csrf
+                                            @csrf
                                             <div class="rt-input-group d-flex align-items-center effect-input hide" id="question1">
                                                 <div class="single-input  col-rt-in-8" style="width: 400px;">
                                                     <input type="text" class="form-control" placeholder=""
                                                            name="from" onclick="">
-                                                    <button type="button"><i class="icofont-send-mail"></i></button>
+                                                    <button type="button"><i class="icofont-location-arrow"></i></button>
                                                 </div>
                                                 <div class="msg">
                                                     Введите город отправления
@@ -107,7 +107,7 @@
                                                 <div class="single-input  col-rt-in-8" style="width: 400px;">
                                                     <input type="text" class="form-control" placeholder=""
                                                            name="from">
-                                                    <button type="button"><i class="icofont-send-mail"></i></button>
+                                                    <button type="button"><i class="icofont-location-arrow"></i></button>
                                                 </div>
                                                 <div class="msg" id="msg">
                                                     Введите адрес Вашего местонахождения
@@ -122,7 +122,7 @@
                                                 <div class="single-input  col-rt-in-8" style="width: 400px;">
                                                     <input type="text" class="form-control" placeholder=""
                                                            name="where">
-                                                    <button type="button"><i class="icofont-send-mail"></i></button>
+                                                    <button type="button"><i class="icofont-location-arrow"></i></button>
                                                 </div>
                                                 <div class="msg" id="msg">
                                                     Введите город и адрес пребытия
@@ -178,43 +178,43 @@
         </div><!-- end single rt banner -->
     </section>
 
-<div class="counter-area">
-    <div class="container">
-        <div class="row">
+    <div class="counter-area">
+        <div class="container">
+            <div class="row">
 
 
 
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="media counter-box-1 align-items-center wow fadeInUp">
-                    <img src="images/counter-icons/counter_iocn_1.png" alt="counter_iocn" draggable="false">
-                    <div class="media-body">
-                        <h5>Поисковых запросов</h5>
-                        <h6><span class="counter">90,000</span><span>+</span></h6>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="media counter-box-1 align-items-center wow fadeInUp">
+                        <img src="images/counter-icons/counter_iocn_1.png" alt="counter_iocn" draggable="false">
+                        <div class="media-body">
+                            <h5>Поисковых запросов</h5>
+                            <h6><span class="counter">90,000</span><span>+</span></h6>
+                        </div>
                     </div>
-                </div>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4 col-md-6 col-12" >
-                <div class="media counter-box-1 align-items-center wow fadeInUp" data-wow-duration="1.5s">
-                    <img src="images/counter-icons/counter_iocn_2.png" alt="counter_iocn" draggable="false">
-                    <div class="media-body">
-                        <h5>Перевозчиков</h5>
-                        <h6><span class="counter">1,200</span></h6>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 col-md-6 col-12" >
+                    <div class="media counter-box-1 align-items-center wow fadeInUp" data-wow-duration="1.5s">
+                        <img src="images/counter-icons/counter_iocn_2.png" alt="counter_iocn" draggable="false">
+                        <div class="media-body">
+                            <h5>Перевозчиков</h5>
+                            <h6><span class="counter">1,200</span></h6>
+                        </div>
                     </div>
-                </div>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-lg-4 col-md-6 col-12">
-                <div class="media counter-box-1 align-items-center wow fadeInUp" data-wow-duration="2s">
-                    <img src="images/counter-icons/counter_iocn_3.png" alt="counter_iocn" draggable="false">
-                    <div class="media-body">
-                        <h5> Довольных клиентов</h5>
-                        <h6><span class="counter">80,000</span><span>+</span></h6>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="media counter-box-1 align-items-center wow fadeInUp" data-wow-duration="2s">
+                        <img src="images/counter-icons/counter_iocn_3.png" alt="counter_iocn" draggable="false">
+                        <div class="media-body">
+                            <h5> Довольных клиентов</h5>
+                            <h6><span class="counter">80,000</span><span>+</span></h6>
+                        </div>
                     </div>
-                </div>
-            </div><!-- /.col-lg-4 -->
+                </div><!-- /.col-lg-4 -->
 
-        </div><!-- /.row -->
-    </div><!-- /.container -->
-</div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </div>
 
     <section class="emigr-services-area rtbgprefix-contain" style="background-image: url(/images/backgrounds/dotbg.png)">
         <div class="spacer-bottom"></div><!-- /.spacer-bottom -->
