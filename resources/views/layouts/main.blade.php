@@ -88,7 +88,7 @@
                     <div class="main-menu">
                         <ul>
                             <li class="current-menu-item"><a href="">Главная</a></li>
-                            <li><a href="">Связь с нами</a></li>
+                            <li><a href="">Контакты</a></li>
                             <li><a href="">Составные билеты</a></li>
                             <li><a href="">Блог</a></li>
 
@@ -102,7 +102,7 @@
                         </div>
                     </div><!-- end main menu -->
                     <div class="rt-nav-tolls d-flex align-items-center">
-    <span class="d-md-inline d-none"><a href="contact.html" class="rt-btn rt-gradient2 rt-rounded text-uppercase rt-Bshadow-1">Мой профиль</a></span>
+    <span class="d-md-inline d-none"><a href="" class="rt-btn rt-gradient2 rt-rounded text-uppercase rt-Bshadow-1">Войти</a></span>
                     </div>
 
                 </div>
@@ -203,9 +203,9 @@
                 <div class="row">
                     <div class="col-xl-8 col-lg-10 mx-auto text-center">
                         <div class="rt-section-title-wrapper text-white">
-                            <h2 class="rt-section-title">
+                            <h2 class="rt-section-title" style="text-transform: initial !important;">
                                 <span>УВЕДОМЛЕНИЯ</span>
-                                Свежие Идеи
+                                Свежие идеи
                             </h2><!-- /.rt-section-title -->
                             <p>
                                 Получайте предложения от EcuTravel на электронную почту. <br>

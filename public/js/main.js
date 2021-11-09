@@ -5,10 +5,12 @@ $(document).ready(function () {
     }, 1000);
 
     // После ввода первого поля
-    $('#question1 input').focusout(function () {
+    $('#question1 button').on('click', function () {
         if ($('#question1 input').val().length >= 2) {
             $('#question2').removeClass('hide');
             typeText('#question2 .msg');
+        } else {
+            alert("Пожалуйста, заполните поле!");
         }
     });
 
@@ -28,10 +30,12 @@ $(document).ready(function () {
         }
     });
 
-    $('#question4 input').focusout(function () {
+    $('#question4 button').on('click', function () {
         if ($('#question4 input').val().length >= 2) {
             $('#question5').removeClass('hide');
             typeText('#question5 .msg');
+        } else {
+            alert("Пожалуйста, заполните поле!");
         }
     });
 
@@ -40,11 +44,16 @@ $(document).ready(function () {
         typeText('#question6 .msg');
     });
 
+    $('#question6 input').on('change', function () {
+        // Показываем кнопку
+        $('#orderPay').removeClass('hide');
+    });
+
 
 
     // Заполнение поля введите точный адрес местонахождения (3й элемент с выбранным "да" во втором)
-    $('#question3 input').focusout(function() {
-        if ($(this).val().length >= 4) {
+    $('#question3 button').on('click', function() {
+        if ($('#question3 input').val().length >= 4) {
             $('#question3 #msg2').removeClass('hide');
             typeText('#question3 #msg2', 500);
 
@@ -53,6 +62,8 @@ $(document).ready(function () {
                 $('#question4').removeClass('hide');
                 typeText('#question4 .msg');
             }, 1000);
+        } else {
+            alert("Пожалуйста, заполните поле!");
         }
     });
 });

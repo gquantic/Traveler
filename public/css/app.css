@@ -5649,7 +5649,7 @@ h6,
 .h5,
 .h6
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
 
     color: #000;
 }
@@ -5765,7 +5765,7 @@ p
 
 .title-font
 {
-    font-family: 'Poppins', sans-serifs !important;
+    font-family: 'Poppins', sans-serif !important;
 }
 
 .text-font
@@ -8536,7 +8536,7 @@ p
 
 .rt-radio-group .custom-control-label
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
 
     color: #333;
@@ -8544,7 +8544,7 @@ p
 
 .rt-radio-group .rt-searchlink > a
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
 
     color: #333;
@@ -9467,7 +9467,7 @@ p
 .flight-box .trip-to span,
 .flight-box .trip-form span
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
 
     display: block;
 
@@ -9789,7 +9789,7 @@ p
 }
 .flight-list-box .trip span:nth-child(1)
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
     font-size: 24px;
     font-weight: 600;
 
@@ -10118,7 +10118,7 @@ p
 
 .hotel-inner-content .middle-text .right span:nth-child(2)
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
     font-size: 24px;
     font-weight: 600;
 
@@ -12952,7 +12952,7 @@ span.menu-title
 .card .card-header.card-primary button[aria-expanded='false'],
 .card .card-header.card-primary button[aria-expanded='true']
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 500;
 
@@ -13955,7 +13955,7 @@ span.menu-title
 }
 .pagination.rt-paganation li.page-item .page-link
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 42px;
@@ -16689,7 +16689,7 @@ span.menu-title
 }
 .single-blg-post .post-thumbnail .meta-date
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
     font-weight: 200;
 
     position: absolute;
@@ -16930,7 +16930,7 @@ span.menu-title
 }
 .widget select
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
 
     display: block;
@@ -17569,7 +17569,7 @@ span.menu-title
 }
 .rt-widget-recent-posts ul li .widget-posts-descr .title
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 600;
     line-height: 26px;
@@ -17884,7 +17884,7 @@ span.menu-title
 
 .comment-author .url
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 700;
 
@@ -18559,7 +18559,7 @@ pre
 }
 .rt-site-footer .footer-top .footer-subscripbe-box .btn
 {
-    font-family: 'Poppins', sans-serifs;
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-size: 14px;
     font-weight: 600;

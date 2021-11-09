@@ -28,38 +28,43 @@
                                         <span>Составной</span>
                                     </a>
                                 </li>
+                                <!-- id="first-tab" data-target="#rt-item_b_first" data-secondary="#rt-item_a_first"
+                                       data-toggle="tab" href="#first" role="tab" aria-controls="first-tab" aria-selected="false" -->
                                 <li class="nav-item">
-                                    <a class="nav-link" id="first-tab" data-target="#rt-item_b_first" data-secondary="#rt-item_a_first"
-                                       data-toggle="tab" href="#first" role="tab" aria-controls="first-tab" aria-selected="false">
+                                    <a class="nav-link">
                                         <i class="icofont-airplane"></i>
                                         <span>Авиа</span>
                                     </a>
                                 </li>
+                                <!-- id="second-tab" data-target="#rt-item_b_second" data-secondary="#rt-item_a_second"
+                                       data-toggle="tab" href="#second" role="tab" aria-controls="second-tab" aria-selected="true" -->
                                 <li class="nav-item">
-                                    <a class="nav-link inactive" id="second-tab" data-target="#rt-item_b_second" data-secondary="#rt-item_a_second"
-                                       data-toggle="tab" href="#second" role="tab" aria-controls="second-tab" aria-selected="true">
+                                    <a class="nav-link inactive">
 
                                         <i class="icofont-hotel"></i>
                                         <span>Отели</span>
                                     </a>
                                 </li>
+                                <!-- id="third-tab" data-target="#rt-item_b_thrid" data-secondary="#rt-item_a_third"
+                                       data-toggle="tab" href="#third" role="tab" aria-controls="third-tab" aria-selected="false" -->
                                 <li class="nav-item">
-                                    <a class="nav-link inactive" id="third-tab" data-target="#rt-item_b_thrid" data-secondary="#rt-item_a_third"
-                                       data-toggle="tab" href="#third" role="tab" aria-controls="third-tab" aria-selected="false">
+                                    <a class="nav-link inactive">
                                         <i class="icofont-car-alt-4"></i>
                                         <span>Авто</span>
                                     </a>
                                 </li>
+                                <!-- id="four-tab" data-target="#rt-item_b_four" data-secondary="#rt-item_a_four"
+                                       data-toggle="tab" href="#four" role="tab" aria-controls="four-tab" aria-selected="false" -->
                                 <li class="nav-item">
-                                    <a class="nav-link inactive" id="four-tab" data-target="#rt-item_b_four" data-secondary="#rt-item_a_four"
-                                       data-toggle="tab" href="#four" role="tab" aria-controls="four-tab" aria-selected="false">
+                                    <a class="nav-link inactive">
                                         <i class="icofont-train-line"></i>
                                         <span>ЖД</span>
                                     </a>
                                 </li>
+                                <!-- data-target="#rt-item_b_thrid" id="third-tab" data-secondary="#rt-item_a_third"
+                                       data-toggle="tab" href="#third" role="tab" aria-controls="third-tab" aria-selected="false" -->
                                 <li class="nav-item">
-                                    <a class="nav-link inactive" id="third-tab" data-target="#rt-item_b_thrid" data-secondary="#rt-item_a_third"
-                                       data-toggle="tab" href="#third" role="tab" aria-controls="third-tab" aria-selected="false">
+                                    <a class="nav-link inactive">
                                         <i class="icofont-car-alt-4"></i>
                                         <span>Такси</span>
                                     </a>
@@ -74,7 +79,8 @@
                                             <div class="rt-input-group d-flex align-items-center effect-input hide" id="question1">
                                                 <div class="single-input  col-rt-in-8" style="width: 400px;">
                                                     <input type="text" class="form-control" placeholder=""
-                                                           name="from">
+                                                           name="from" onclick="">
+                                                    <button type="button"><i class="icofont-send-mail"></i></button>
                                                 </div>
                                                 <div class="msg">
                                                     Введите город отправления
@@ -101,6 +107,7 @@
                                                 <div class="single-input  col-rt-in-8" style="width: 400px;">
                                                     <input type="text" class="form-control" placeholder=""
                                                            name="from">
+                                                    <button type="button"><i class="icofont-send-mail"></i></button>
                                                 </div>
                                                 <div class="msg" id="msg">
                                                     Введите адрес Вашего местонахождения
@@ -115,6 +122,7 @@
                                                 <div class="single-input  col-rt-in-8" style="width: 400px;">
                                                     <input type="text" class="form-control" placeholder=""
                                                            name="where">
+                                                    <button type="button"><i class="icofont-send-mail"></i></button>
                                                 </div>
                                                 <div class="msg" id="msg">
                                                     Введите город и адрес пребытия
@@ -143,11 +151,13 @@
                                                     </label>
                                                 </div>
                                                 <div class="msg" style="margin-left: 40px;">
-                                                    Хотите рассчитать с учётом обратной дороги
+                                                    Хотите рассчитать с учётом обратной дороги?
                                                 </div>
-
-                                                <button style="transform: translateY(100px);height: 50px;width: 200px;font-size: 17px;" class="btn btn-primary">Заказать</button>
                                             </div>
+                                            <button style="transform: translateY(20px);height: 50px;width: 200px;font-size: 17px;line-height: 18px !important;"
+                                                    class="effect-input rt-btn rt-gradient2 rt-rounded text-uppercase rt-Bshadow-1 hide" id="orderPay">
+                                                Найти
+                                            </button>
                                         </form><!-- ./ form -->
                                     </div>
                                     <div class="tab-pane  rtIncative" id="rt-item_a_second" role="tabpanel" aria-labelledby="rt-item_a_second">
