@@ -142,10 +142,58 @@ label[for] {
 
 .dialog-item .single-input {
     width: 450px;
-    margin-top: 20px;
+    margin-top: 7px;
     float: right;
     text-align: right;
     display: flex;
     justify-content: end;
     align-items: center;
+}
+
+.rt-banner-height .col-lg-9 {
+    margin-top: 198px;
+    position: relative;
+}
+
+.info-selfcontent {
+    margin-top: 300px;
+}
+
+.exp-row__title-link {
+    color: #fff !important;
+    text-align: center !important;
+}
+
+
+
+
+
+/* Viewport */
+
+@media (max-width: 900px) {
+    .dialog-item {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .dialog-item .msg {
+        width: 100% !important;
+        margin-left: -23px !important;
+        line-height: 16px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 48px !important;
+    }
+    .dialog-item .single-input {
+        max-width: 95%;
+        float: right;
+    }
+
+    .info-selfcontent {
+        margin-top: 700px;
+    }
+
+    form button {
+        float: right;
+    }
 }

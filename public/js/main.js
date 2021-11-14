@@ -2,13 +2,13 @@ $(document).ready(function () {
     setTimeout(function () {
         $('#question1').removeClass('hide');
         typeText('#question1 .msg');
-        typeText('#question2 .msg');
+        // typeText('#question2 .msg');
     }, 1000);
 
     // После ввода первого поля
     $('#question1 button').on('click', function () {
         if ($('#question1 input').val().length >= 2) {
-            $('#question2').removeClass('hide');
+            // $('#question2').removeClass('hide');
             $('#question3').removeClass('hide');
 
             typeText('#question3 #msg1');

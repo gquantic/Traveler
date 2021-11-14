@@ -9,7 +9,7 @@
     <section class="rt-banner-area">
         <div class="single-rt-banner rt-banner-height" style="background-image: url(images/all-img/banner01.png)">
             <div class="container">
-                <div class="row  rt-banner-height align-items-center">
+                <div class="row">
                     <div class="col-lg-9">
                         <div class="rt-banner-content">
                             <h1 class="wow fade-in-bottom" data-wow-duration="1s" data-wow-delay="0.5s">
@@ -78,14 +78,32 @@
                                         <form action="{{ route('make-road') }}" method="get" id="form-cards">
                                             @csrf
                                             <div class="rt-input-group effect-input hide dialog-item" id="question1">
-                                                <div class="msg">
-                                                    Введите город отправления
+                                                <div class="msg" style="width: 710px;padding-left: 85px;margin-left: -69px;">
+                                                    Введите город отправления и желаете ли Вы получить расчет от двери до двери?
                                                 </div>
-                                                <div class="single-input col-rt-in-12">
-                                                    <input type="text" class="form-control" placeholder=""
-                                                           name="from" id="from" onclick="roadMaker('from')">
-                                                    <button type="button"><i class="icofont-location-arrow"></i></button>
+                                                <div class="d-flex align-items-center justify-content-start">
+                                                    <div class="single-input col-rt-in-12 mr-5 mt-2 d-flex align-items-center">
+                                                        <div class="button_checkbox__block" style="margin-bottom: -16px;" id="awesome_checkbox">
+                                                            <input type="hidden" name="checkbox" id="checkbox" value="no">
+                                                            <div class="button_checkbox active" data-value="no">Нет</div>
+                                                            <div class="slideThree">
+                                                                <input type="checkbox" value="Yes" id="slideThree" name="check" checked="">
+                                                                <label for="slideThree" class="slideThree_label">
+                                                                    <span></span>
+                                                                    <span></span>
+                                                                    <span></span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="button_checkbox" data-value="yes">Да</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-input col-rt-in-12">
+                                                        <input type="text" class="form-control" placeholder=""
+                                                        name="from" id="from" onclick="roadMaker('from')">
+                                                        <button type="button"><i class="icofont-location-arrow"></i></button>
+                                                    </div>
                                                 </div>
+                                                
                                             </div>
 
 {{--                                            <div class="d-flex align-items-center mt-4 effect-input hide" id="question2">--}}
@@ -104,63 +122,46 @@
 {{--                                                </div>--}}
 {{--                                            </div>--}}
 
-                                            <div class="d-flex align-items-center mt-4 effect-input" id="question2">
-                                                <div class="button_checkbox__block" id="awesome_checkbox">
-                                                    <input type="hidden" name="checkbox" id="checkbox" value="no">
-                                                    <div class="button_checkbox active" data-value="no">Нет</div>
-                                                    <div class="slideThree">
-                                                        <input type="checkbox" value="Yes" id="slideThree" name="check" checked="">
-                                                        <label for="slideThree" class="slideThree_label">
-                                                            <span></span>
-                                                            <span></span>
-                                                            <span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="button_checkbox" data-value="yes">Да</div>
+                                            <div class="rt-input-group effect-input hide mt-2 dialog-item" id="question3">
+                                                <div class="msg" id="msg1" style="margin-left: -41px;">
+                                                    Введите адрес Вашего местонахождения
                                                 </div>
-                                                <div class="msg" style="margin-left: 40px;">
-                                                    Желаете получить расчет от двери до двери?
-                                                </div>
-                                            </div>
-
-                                            <div class="rt-input-group d-flex align-items-center effect-input hide mt-4" id="question3">
-                                                <div class="single-input  col-rt-in-8" style="width: 400px;">
+                                                <div class="single-input col-rt-in-8" style="width: 400px;">
                                                     <input type="text" class="form-control" placeholder=""
                                                            name="from_detals">
                                                     <button type="button"><i class="icofont-location-arrow"></i></button>
                                                 </div>
-                                                <div class="msg" id="msg1">
-                                                    Введите адрес Вашего местонахождения
-                                                </div>
-
-                                                <div class="msg effect-input hide mt-4" id="msg2">
+                                                <div class="msg effect-input hide mt-4" id="msg2" style="margin-left: -41px;">
                                                     Ок, отлично
                                                 </div>
                                             </div>
 
-                                            <div class="rt-input-group d-flex align-items-center effect-input hide mt-4" id="question4">
+                                            <div class="rt-input-group effect-input hide mt-2 dialog-item" id="question4">
+                                                <div class="msg" id="msg" style="margin-left: -41px;">
+                                                    Введите город и адрес пребытия
+                                                </div>
                                                 <div class="single-input  col-rt-in-8" style="width: 400px;">
                                                     <input type="text" class="form-control" placeholder=""
                                                            name="where" id="where" onclick="roadMaker('where')">
                                                     <button type="button"><i class="icofont-location-arrow"></i></button>
                                                 </div>
-                                                <div class="msg" id="msg">
-                                                    Введите город и адрес пребытия
-                                                </div>
                                             </div>
 
-                                            <div class="rt-input-group d-flex align-items-center effect-input hide mt-4" id="question5">
-                                                <div class="single-input  col-rt-in-8" style="width: 400px;">
+                                            <div class="rt-input-group effect-input hide mt-4 dialog-item" id="question5">
+                                                <div class="msg" id="msg" style="margin-left: -41px;">
+                                                    Когда вы хотите уехать?
+                                                </div>
+                                                <div class="single-input col-rt-in-8" style="width: 400px;">
                                                     <input type="date" class="form-control" placeholder=""
                                                            name="from">
                                                 </div>
-                                                <div class="msg" id="msg">
-                                                    Когда вы хотите уехать?
-                                                </div>
                                             </div>
 
-                                            <div class="d-flex align-items-center mt-4 effect-input hide" id="question6">
-                                                <div class="single-input mr-3 d-flex justify-content-start" style="width: 30px;height: 30px;">
+                                            <div class="single-input mt-4 effect-input hide dialog-item" id="question6">
+                                                <div class="msg" style="margin-left: -41px;">
+                                                    Хотите рассчитать с учётом обратной дороги?
+                                                </div>
+                                                <div class="single-input mr-3 d-flex justify-content-start" style="width: 100px;height: 30px;">
                                                     <label for="total_count_yes" class="d-flex align-items-center mr-3">
                                                         <input type="radio" name="total_count" id="total_count_yes" value="yes">
                                                         <p class="mb-0 ml-2">Да</p>
@@ -169,9 +170,6 @@
                                                         <input type="radio" name="total_count" id="total_count_no" value="no">
                                                         <p class="mb-0 ml-2">Нет</p>
                                                     </label>
-                                                </div>
-                                                <div class="msg" style="margin-left: 40px;">
-                                                    Хотите рассчитать с учётом обратной дороги?
                                                 </div>
                                             </div>
                                             <button style="transform: translateY(20px);height: 50px;width: 200px;font-size: 17px;line-height: 18px !important;"
@@ -198,12 +196,10 @@
         </div><!-- end single rt banner -->
     </section>
 
-    <div class="counter-area">
+
+    <div class="counter-area info-selfcontent">
         <div class="container">
             <div class="row">
-
-
-
                 <div class="col-lg-4 col-md-6 col-12">
                     <div class="media counter-box-1 align-items-center wow fadeInUp">
                         <img src="images/counter-icons/counter_iocn_1.png" alt="counter_iocn" draggable="false">
@@ -297,7 +293,7 @@
                             необычные экскурсии
                         </h2><!-- /.rt-section-title -->
                         <p>Наши популярные туры помогут вам найти путешествие, которое идеально подходит для Вас!</p>
-                        <script id="tripster-widget-655489" src="https://experience.tripster.ru/partner/widget.js?country=italy&amp;template=horizontal&amp;order=top&amp;width=100%25&amp;num=6&amp;version=2&amp;partner=mivezem&amp;script_id=tripster-widget-655489" async=""></script>
+                        <div class="exp-row exp-row_first multiple"></div>
                     </div>
                 </div>
             </div>
