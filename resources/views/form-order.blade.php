@@ -1,30 +1,25 @@
 @extends('layouts.main')
 
 @section('page-title')
-    Поиск билетов
+    Найденные билеты
 @endsection
 
 @section('content')
-    <div class="rt-breadcump rt-breadcump-height with-logn-height">
-        <div class="rt-page-bg rtbgprefix-cover" style="background-image: url(/images/backgrounds/bredcump.png)">
-        </div><!-- /.rt-page-bg -->
-        <div class="container">
-            <div class="row rt-breadcump-height with-logn-height">
-                <div class="col-12">
-                    <div class="breadcrumbs-content">
-                        <h3>Поиск билета</h3>
-                        <div class="breadcrumbs">
-                            <span class="divider"><i class="icofont-home"></i></span>
-                            <a href="/" title="Home">Главная</a>
-                            <span class="divider"><i class="icofont-simple-right"></i></span>
-                            Поиск билета
+        <style>
+            .top-social li a {
+                color: rgba(0,0,0,.5);
+            }
 
-                        </div><!-- /.breadcrumbs -->
-                    </div><!-- /.breadcrumbs-content -->
-                </div><!-- /.col-12 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
+            .white-menu .main-menu > ul > li.current-menu-item > a,
+            .white-menu .main-menu > ul > li > a {
+                color: #000;
+            }
 
+            .white-menu .main-menu > ul > li.current-menu-item > a:hover {
+                color: inherit;
+            }
+        </style>
+        <div style="margin-top: 200px;"></div>
         <div class="mt-5" style="margin-bottom: -100px;">
             <div class="container">
                 <div class="row">
@@ -64,9 +59,9 @@
 {{--                        </div><!-- /.rt-banner-searchbox -->--}}
 {{--                    </div><!-- /.col-lg-10 -->--}}
 
-                    <div id="search_loader">
-                        @extends('animations.plane')
-                    </div>
+                    <!-- <div id="search_loader">
+                        {{-- @extends('animations.plane') --}}
+                    </div> -->
 
                     <div class="spacer-bottom"></div>
                 </div><!-- /.row -->
@@ -85,17 +80,17 @@
                                     <div class="rt-sidebar-group">
                                         <div class="rt-widget widget_range-slider">
                                             <h3 class="rt-widget-title">
-                                                Filter by Price
+                                                Фильтровать по цене
                                             </h3><!-- /.rt-widget-title -->
 
                                             <div class="slider-range ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 21.4286%; width: 60.7143%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 21.4286%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 82.1429%;"></a></div>
                                             <div class="price_slider_amount">
                                                 <div class="clearfix">
                                                     <div class="float-left">
-                                                        <span>Price:</span>
+                                                        <span>Цена:</span>
                                                     </div><!-- /.float-left -->
                                                     <div class="float-right">
-                                                        <input type="text" class="amount" name="price" placeholder="Add Your Price">
+                                                        <input type="text" class="amount" name="price" placeholder="Введите цену">
                                                     </div><!-- /.float-right -->
                                                 </div><!-- /.clearfix -->
                                             </div>
@@ -105,7 +100,7 @@
                                         </div><!-- /.rt-widget -->
                                         <div class="rt-widget widget_plane_time">
                                             <h3 class="rt-widget-title">
-                                                Stops
+                                                Пересадки
                                             </h3><!-- /.rt-widget-title -->
                                             <ul>
                                                 <li class="clearfix">
@@ -113,96 +108,26 @@
                                                     <div class="form-check-inline">
                                                         <input class="form-check-input" type="checkbox" id="gridCheckrt-1">
                                                         <label class="form-check-label" for="gridCheckrt-1">
-                                                            Nonstop(63)
+                                                            Нет (63)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$711</span>
+                                                    <span class="float-right">711₽</span>
                                                 </li>
                                                 <li class="clearfix">
 
                                                     <div class="form-check-inline">
                                                         <input class="form-check-input" type="checkbox" id="gridCheckrt-2">
                                                         <label class="form-check-label" for="gridCheckrt-2">
-                                                            1 Stop (34)
+                                                            Есть (34)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$610</span>
+                                                    <span class="float-right">610₽</span>
                                                 </li>
                                             </ul>
-                                        </div><!-- /.rt-widget -->
+                                        </div>
                                         <div class="rt-widget widget_plane_time">
                                             <h3 class="rt-widget-title">
-                                                Airlines included
-                                            </h3><!-- /.rt-widget-title -->
-                                            <ul>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-3">
-                                                        <label class="form-check-label" for="gridCheckrt-3">
-                                                            Delta (16)
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-                                                    <span class="float-right">$1,511</span>
-                                                </li>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-4">
-                                                        <label class="form-check-label" for="gridCheckrt-4">
-                                                            Aer Lingus (11)
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-                                                    <span class="float-right">$1106</span>
-                                                </li>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-5">
-                                                        <label class="form-check-label" for="gridCheckrt-5">
-                                                            Iberia (7)
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-                                                    <span class="float-right">$1885</span>
-                                                </li>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-51">
-                                                        <label class="form-check-label" for="gridCheckrt-51">
-                                                            British Airways (11)
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-                                                    <span class="float-right">$$1185</span>
-                                                </li>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-6">
-                                                        <label class="form-check-label" for="gridCheckrt-6">
-                                                            KLM (7)
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-                                                    <span class="float-right">$1885</span>
-                                                </li>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-6s">
-                                                        <label class="form-check-label" for="gridCheckrt-6s">
-                                                            Finnair (6)
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-                                                    <span class="float-right">$1885</span>
-                                                </li>
-                                            </ul>
-                                            <div class="show-more-links">
-                                                <a href="#">Show more</a>
-                                            </div><!-- /.show-more-links -->
-                                        </div><!-- /.rt-widget -->
-                                        <div class="rt-widget widget_plane_time">
-                                            <h3 class="rt-widget-title">
-                                                Departure time
+                                                Время отправления
                                             </h3><!-- /.rt-widget-title -->
                                             <ul>
                                                 <li class="clearfix">
@@ -210,7 +135,7 @@
                                                     <div class="form-check-inline">
                                                         <input class="form-check-input" type="checkbox" id="gridCheckrt-11">
                                                         <label class="form-check-label" for="gridCheckrt-11">
-                                                            Morning (5am - 11am)
+                                                            Утро (5:00 - 12:00)
                                                         </label>
                                                     </div><!-- ./orm-group -->
 
@@ -220,7 +145,7 @@
                                                     <div class="form-check-inline">
                                                         <input class="form-check-input" type="checkbox" id="gridCheckrt-111">
                                                         <label class="form-check-label" for="gridCheckrt-111">
-                                                            Afternoon (12pm - 5pm)
+                                                            Днем (12:00 - 18:00)
                                                         </label>
                                                     </div><!-- ./orm-group -->
 
@@ -230,7 +155,7 @@
                                                     <div class="form-check-inline">
                                                         <input class="form-check-input" type="checkbox" id="gridCheckrt-1111">
                                                         <label class="form-check-label" for="gridCheckrt-1111">
-                                                            Evening (6pm - 11pm)
+                                                            Вечер (18:00 - 22:00)
                                                         </label>
                                                     </div><!-- ./orm-group -->
 
@@ -240,15 +165,15 @@
                                         </div><!-- /.rt-widget -->
                                         <div class="rt-widget widget_plane_time">
                                             <h3 class="rt-widget-title">
-                                                Arrival time
+                                                Время прибытия
                                             </h3><!-- /.rt-widget-title -->
                                             <ul>
                                                 <li class="clearfix">
 
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-22">
-                                                        <label class="form-check-label" for="gridCheckrt-22">
-                                                            Morning (5am - 11am)
+                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-11">
+                                                        <label class="form-check-label" for="gridCheckrt-11">
+                                                            Утро (5:00 - 12:00)
                                                         </label>
                                                     </div><!-- ./orm-group -->
 
@@ -256,10 +181,9 @@
                                                 <li class="clearfix">
 
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-222">
-                                                        <label class="form-check-label" for="gridCheckrt-222">
-                                                            Afternoon (12pm -
-                                                            5:pm)
+                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-111">
+                                                        <label class="form-check-label" for="gridCheckrt-111">
+                                                            Днем (12:00 - 18:00)
                                                         </label>
                                                     </div><!-- ./orm-group -->
 
@@ -267,98 +191,23 @@
                                                 <li class="clearfix">
 
                                                     <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-2222">
-                                                        <label class="form-check-label" for="gridCheckrt-2222">
-                                                            Evening (6pm - 11pm)
+                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-1111">
+                                                        <label class="form-check-label" for="gridCheckrt-1111">
+                                                            Вечер (18:00 - 22:00)
                                                         </label>
                                                     </div><!-- ./orm-group -->
 
                                                 </li>
                                             </ul>
 
-                                        </div><!-- /.rt-widget -->
-                                        <div class="rt-widget widget_plane_time">
-                                            <h3 class="rt-widget-title">
-                                                Departure airports
-                                            </h3><!-- /.rt-widget-title -->
-                                            <ul>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-ex-1">
-                                                        <label class="form-check-label" for="gridCheckrt-ex-1">
-                                                            LHR (London) (82)
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-                                                    <span class="float-right">$711</span>
-                                                </li>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-ex-2">
-                                                        <label class="form-check-label" for="gridCheckrt-ex-2">
-                                                            LGW (London) (10)
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-                                                    <span class="float-right">$610</span>
-                                                </li>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-ex-3">
-                                                        <label class="form-check-label" for="gridCheckrt-ex-3">
-                                                            LCY (London) (5)
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-                                                    <span class="float-right">$1106</span>
-                                                </li>
-
-                                            </ul>
-
-                                        </div><!-- /.rt-widget -->
-                                        <div class="rt-widget widget_plane_time">
-                                            <h3 class="rt-widget-title">
-                                                Arrival airports
-                                            </h3><!-- /.rt-widget-title -->
-                                            <ul>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-ex-11">
-                                                        <label class="form-check-label" for="gridCheckrt-ex-11">
-                                                            JFK (New York) (70)
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-                                                    <span class="float-right">$711</span>
-                                                </li>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-ex-22">
-                                                        <label class="form-check-label" for="gridCheckrt-ex-22">
-                                                            EWR (Newark) (24)
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-                                                    <span class="float-right">$610</span>
-                                                </li>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="gridCheckrt-ex-33">
-                                                        <label class="form-check-label" for="gridCheckrt-ex-33">
-                                                            LGA (New York) (3)
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-                                                    <span class="float-right">$1106</span>
-                                                </li>
-
-                                            </ul>
-
-                                        </div><!-- /.rt-widget -->
+                                        </div>
                                     </div><!-- /.rt-sidebar-group -->
                                 </div><!-- /.col-lg-3 -->
                                 <div class="col-xl-9 col-lg-10 mx-auto mt-5 mt-xl-0">
                                     <div class="row">
+                                        <!-- <div class="col-12">
+                                            <h3>Найденные билеты</h4>
+                                        </div> -->
                                         <!-- /.col-lg-12 -->
                                         <div class="col-lg-12 col-md-6">
                                             <div class="flight-list-box rt-mb-30">
@@ -367,7 +216,7 @@
                                                         <img src="/images/all-img/flt-logo-1.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -385,30 +234,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -420,7 +269,7 @@
                                                         <img src="/images/all-img/flt-logo-2.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -438,30 +287,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample2" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample2">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample2" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample2">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample2">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -473,7 +322,7 @@
                                                         <img src="/images/all-img/flt-logo-1.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -491,30 +340,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample3" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample3">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample3" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample3">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample3">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -526,7 +375,7 @@
                                                         <img src="/images/all-img/flt-logo-2.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -544,30 +393,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample4" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample4">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample4" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample4">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample4">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -579,7 +428,7 @@
                                                         <img src="/images/all-img/flt-logo-1.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -597,30 +446,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample5" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample5">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample5" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample5">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample5">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -632,7 +481,7 @@
                                                         <img src="/images/all-img/flt-logo-2.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -650,30 +499,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample6" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample6">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample6" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample6">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample6">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -685,7 +534,7 @@
                                                         <img src="/images/all-img/flt-logo-1.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -703,30 +552,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample7" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample7">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample7" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample7">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample7">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -738,7 +587,7 @@
                                                         <img src="/images/all-img/flt-logo-2.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -756,30 +605,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample8" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample8">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample8" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample8">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample8">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -791,7 +640,7 @@
                                                         <img src="/images/all-img/flt-logo-1.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -809,30 +658,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample9" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample9">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample9" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample9">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample9">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -844,7 +693,7 @@
                                                         <img src="/images/all-img/flt-logo-2.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -862,30 +711,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample10" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample10">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample10" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample10">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample10">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -897,7 +746,7 @@
                                                         <img src="/images/all-img/flt-logo-1.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -915,30 +764,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample11" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample11">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample11" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample11">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample11">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -950,7 +799,7 @@
                                                         <img src="/images/all-img/flt-logo-2.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -968,30 +817,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample12" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample12">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample12" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample12">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample12">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -1003,7 +852,7 @@
                                                         <img src="/images/all-img/flt-logo-2.png" alt="flt logo" draggable="false">
                                                     </div><!-- /.flight-logo -->
                                                     <div class="pricing">
-                                                        <h5>Scoot</h5>
+                                                        <h5>Ростов-на-Дону</h5>
                                                         <p>TR978 | Airbus A320-212</p>
                                                     </div><!-- /.pricing -->
                                                     <div class="flight-time d-flex justify-content-between align-items-lg-center">
@@ -1021,30 +870,30 @@
                                                     </div><!-- /.flight-time -->
                                                     <div class="flight-detils">
                                                         <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                                        <span class="d-block"><a href="#collapseExample13" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample13">Flight details <i class="icofont-simple-down"></i></a></span>
+                                                        <span class="d-block"><a href="#collapseExample13" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample13">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                     </div><!-- /.flight-detils -->
                                                     <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
+                                                        <span class="d-blok">610₽</span>
+                                                        <span class="d-block">С пересадкой</span>
                                                     </div><!-- /.trip -->
                                                     <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">В корзину</a>
                                                     </div><!-- /.book-now -->
                                                 </div><!-- /.top-content -->
                                                 <div class="collapse bottom-content" id="collapseExample13">
-                                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
+                                                    <p><span>Ростов-на-Дону - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
                                                     <ul class="flight-timeline">
 
                                                         <li>
-                                                            <span>Nov 12 10:55</span>
+                                                            <span>Ноябрь 12 10:55</span>
 
                                                         </li>
-                                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
+                                                        <li><span>Москва - Аэропорт Домодедово</span></li>
                                                         <li>
-                                                            <span>Nov 12 15:00</span>
+                                                            <span>Ноябрь 12 15:00</span>
 
                                                         </li>
-                                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
+                                                        <li><span>Ростов - Аэропорт Платов</span></li>
                                                     </ul>
                                                 </div><!-- /.bottom content -->
                                             </div><!-- /.flight-box -->
@@ -1135,27 +984,27 @@
                                         </div><!-- /.rt-widget -->
                                         <div class="rt-widget widget_range-slider">
                                             <h3 class="rt-widget-title">
-                                                Filter by Price
+                                                Фильтровать по цене
                                             </h3><!-- /.rt-widget-title -->
 
                                             <div class="slider-range ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 21.4286%; width: 60.7143%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 21.4286%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 82.1429%;"></a></div>
                                             <div class="price_slider_amount">
                                                 <div class="clearfix">
                                                     <div class="float-left">
-                                                        <span>Price:</span>
+                                                        <span>Цена:</span>
                                                     </div><!-- /.float-left -->
                                                     <div class="float-right">
-                                                        <input type="text" class="amount" name="price" placeholder="Add Your Price">
+                                                        <input type="text" class="amount" name="price" placeholder="Введите цену">
                                                     </div><!-- /.float-right -->
                                                 </div><!-- /.clearfix -->
                                             </div>
                                             <div class="text-center">
-                                                <input type="submit" value="Filter" class="rt-btn rt-gradient rounded-sm rt-sm text-uppercase">
+                                                <input type="submit" value="Фильтровать" class="rt-btn rt-gradient rounded-sm rt-sm text-uppercase">
                                             </div><!-- /.text-center -->
                                         </div><!-- /.rt-widget -->
                                         <div class="rt-widget widget_plane_time">
                                             <h3 class="rt-widget-title">
-                                                Booking Policy
+                                                Политика Бронирования
                                             </h3><!-- /.rt-widget-title -->
                                             <ul>
                                                 <li class="clearfix">
@@ -1163,7 +1012,7 @@
                                                     <div class="form-check-inline">
                                                         <input class="form-check-input" type="checkbox" id="Hotel_gridCheckrt-1">
                                                         <label class="form-check-label" for="Hotel_gridCheckrt-1">
-                                                            Instant Confirmation
+                                                            Мгновенное Подтверждение
                                                         </label>
                                                     </div><!-- ./orm-group -->
 
@@ -1173,7 +1022,7 @@
                                                     <div class="form-check-inline">
                                                         <input class="form-check-input" type="checkbox" id="Hotel_gridCheckrt-2">
                                                         <label class="form-check-label" for="Hotel_gridCheckrt-2">
-                                                            Free Cancellation
+                                                            Бесплатная Отмена бронирования
                                                         </label>
                                                     </div><!-- ./orm-group -->
 
@@ -1182,7 +1031,7 @@
                                         </div><!-- /.rt-widget -->
                                         <div class="rt-widget widget_plane_time">
                                             <h3 class="rt-widget-title">
-                                                Bed Type
+                                                Тип кровати
                                             </h3><!-- /.rt-widget-title -->
                                             <ul>
                                                 <li class="clearfix">
@@ -1190,7 +1039,7 @@
                                                     <div class="form-check-inline">
                                                         <input class="form-check-input" type="checkbox" id="Hotel_gridCheckrt-3">
                                                         <label class="form-check-label" for="Hotel_gridCheckrt-3">
-                                                            2 Single beds
+                                                            2 Односпальные кровати
                                                         </label>
                                                     </div><!-- ./orm-group -->
 
@@ -1200,7 +1049,7 @@
                                                     <div class="form-check-inline">
                                                         <input class="form-check-input" type="checkbox" id="Hotel_gridCheckrt-4">
                                                         <label class="form-check-label" for="Hotel_gridCheckrt-4">
-                                                            1 Queen bed
+                                                            1 Двуспальная кровать
                                                         </label>
                                                     </div><!-- ./orm-group -->
 
@@ -1482,7 +1331,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -1529,7 +1378,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -1576,7 +1425,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -1623,7 +1472,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -1670,7 +1519,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -1713,7 +1562,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -1760,7 +1609,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -1807,7 +1656,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -1850,7 +1699,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -1893,7 +1742,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -1936,7 +1785,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -1979,7 +1828,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -2026,7 +1875,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -2147,7 +1996,7 @@
                                                             Pay now (72)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$30</span>
+                                                    <span class="float-right">30<₽/span>
 
                                                 </li>
                                                 <li class="clearfix">
@@ -2158,7 +2007,7 @@
                                                             Pay later (425)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$32</span>
+                                                    <span class="float-right">32<₽/span>
 
                                                 </li>
                                             </ul>
@@ -2176,7 +2025,7 @@
                                                             Economy (42)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$30</span>
+                                                    <span class="float-right">30<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -2186,7 +2035,7 @@
                                                             Compact (42)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$30</span>
+                                                    <span class="float-right">30<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -2196,7 +2045,7 @@
                                                             Midsize (44)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$37</span>
+                                                    <span class="float-right">37<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -2206,7 +2055,7 @@
                                                             Standard (44)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$37</span>
+                                                    <span class="float-right">37<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -2216,7 +2065,7 @@
                                                             Full-size (44)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$37</span>
+                                                    <span class="float-right">37<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -2226,7 +2075,7 @@
                                                             Premium (60)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$38</span>
+                                                    <span class="float-right">38<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -2236,7 +2085,7 @@
                                                             Luxury (28)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$59</span>
+                                                    <span class="float-right">59<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -2246,7 +2095,7 @@
                                                             Sports Car (11)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$250</span>
+                                                    <span class="float-right">250₽</span>
                                                 </li>
                                             </ul>
                                         </div><!-- /.rt-widget -->
@@ -2263,7 +2112,7 @@
                                                             Less than 4 seats
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$1,853.7</span>
+                                                    <span class="float-right">1,8₽53.7</span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -2273,7 +2122,7 @@
                                                             4-5 Seats
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$25.07</span>
+                                                    <span class="float-right">25.₽07</span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -2283,7 +2132,7 @@
                                                             6-7 Seats
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$200.4</span>
+                                                    <span class="float-right">200₽.4</span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -2293,7 +2142,7 @@
                                                             8-9 Seats
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$259.03</span>
+                                                    <span class="float-right">259₽.03</span>
                                                 </li>
                                             </ul>
 
@@ -2311,7 +2160,7 @@
                                                             Unlimited Mileage
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$58.94</span>
+                                                    <span class="float-right">58.₽94</span>
 
                                                 </li>
                                                 <li class="clearfix">
@@ -2322,7 +2171,7 @@
                                                             Limited Mileage
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$25.07</span>
+                                                    <span class="float-right">25.₽07</span>
 
                                                 </li>
                                             </ul>
@@ -2423,7 +2272,7 @@
                                             </div><!-- /.ck-list -->
                                             <div class="price-mant text-lg-right">
                                                 <span class="d-block f-size-12 text-878">7 days</span>
-                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">$275</span>
+                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">275₽</span>
                                                 <a href="car-2.html" class="rt-btn rt-gradient pill rt-sm3 text-uppercase rt-mt-10">Select</a>
                                             </div><!-- /.price-mant -->
                                         </div><!-- /.top-content -->
@@ -2500,7 +2349,7 @@
                                             </div><!-- /.ck-list -->
                                             <div class="price-mant text-lg-right">
                                                 <span class="d-block f-size-12 text-878">7 days</span>
-                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">$275</span>
+                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">275₽</span>
                                                 <a href="car-2.html" class="rt-btn rt-gradient pill rt-sm3 text-uppercase rt-mt-10">Select</a>
                                             </div><!-- /.price-mant -->
                                         </div><!-- /.top-content -->
@@ -2577,7 +2426,7 @@
                                             </div><!-- /.ck-list -->
                                             <div class="price-mant text-lg-right">
                                                 <span class="d-block f-size-12 text-878">7 days</span>
-                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">$275</span>
+                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">275₽</span>
                                                 <a href="car-2.html" class="rt-btn rt-gradient pill rt-sm3 text-uppercase rt-mt-10">Select</a>
                                             </div><!-- /.price-mant -->
                                         </div><!-- /.top-content -->
@@ -2654,7 +2503,7 @@
                                             </div><!-- /.ck-list -->
                                             <div class="price-mant text-lg-right">
                                                 <span class="d-block f-size-12 text-878">7 days</span>
-                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">$275</span>
+                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">275₽</span>
                                                 <a href="car-2.html" class="rt-btn rt-gradient pill rt-sm3 text-uppercase rt-mt-10">Select</a>
                                             </div><!-- /.price-mant -->
                                         </div><!-- /.top-content -->
@@ -2731,7 +2580,7 @@
                                             </div><!-- /.ck-list -->
                                             <div class="price-mant text-lg-right">
                                                 <span class="d-block f-size-12 text-878">7 days</span>
-                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">$275</span>
+                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">275₽</span>
                                                 <a href="car-2.html" class="rt-btn rt-gradient pill rt-sm3 text-uppercase rt-mt-10">Select</a>
                                             </div><!-- /.price-mant -->
                                         </div><!-- /.top-content -->
@@ -2808,7 +2657,7 @@
                                             </div><!-- /.ck-list -->
                                             <div class="price-mant text-lg-right">
                                                 <span class="d-block f-size-12 text-878">7 days</span>
-                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">$275</span>
+                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">275₽</span>
                                                 <a href="car-2.html" class="rt-btn rt-gradient pill rt-sm3 text-uppercase rt-mt-10">Select</a>
                                             </div><!-- /.price-mant -->
                                         </div><!-- /.top-content -->
@@ -2876,27 +2725,27 @@
                                     <div class="rt-sidebar-group">
                                         <div class="rt-widget widget_range-slider">
                                             <h3 class="rt-widget-title">
-                                                Filter by Price
+                                                Фильтровать по цене
                                             </h3><!-- /.rt-widget-title -->
 
                                             <div class="slider-range ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><div class="ui-slider-range ui-widget-header" style="left: 21.4286%; width: 60.7143%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 21.4286%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 82.1429%;"></a></div>
                                             <div class="price_slider_amount">
                                                 <div class="clearfix">
                                                     <div class="float-left">
-                                                        <span>Price:</span>
+                                                        <span>Цена:</span>
                                                     </div><!-- /.float-left -->
                                                     <div class="float-right">
-                                                        <input type="text" class="amount" name="price" placeholder="Add Your Price">
+                                                        <input type="text" class="amount" name="price" placeholder="Введите цену">
                                                     </div><!-- /.float-right -->
                                                 </div><!-- /.clearfix -->
                                             </div>
                                             <div class="text-center">
-                                                <input type="submit" value="Filter" class="rt-btn rt-gradient rounded-sm rt-sm text-uppercase">
+                                                <input type="submit" value="Фильтровать" class="rt-btn rt-gradient rounded-sm rt-sm text-uppercase">
                                             </div><!-- /.text-center -->
                                         </div><!-- /.rt-widget -->
                                         <div class="rt-widget widget_plane_time">
                                             <h3 class="rt-widget-title">
-                                                Departure Time
+                                                Время отправления
                                             </h3><!-- /.rt-widget-title -->
                                             <ul>
                                                 <li class="clearfix">
@@ -2939,7 +2788,7 @@
                                         </div><!-- /.rt-widget -->
                                         <div class="rt-widget widget_plane_time">
                                             <h3 class="rt-widget-title">
-                                                Arrival Time
+                                                Время прибытия
                                             </h3><!-- /.rt-widget-title -->
                                             <ul>
                                                 <li class="clearfix">
@@ -2985,7 +2834,7 @@
                                         </div><!-- /.rt-widget -->
                                         <div class="rt-widget widget_plane_time">
                                             <h3 class="rt-widget-title">
-                                                Arrival Station
+                                                Станция прибытия
                                             </h3><!-- /.rt-widget-title -->
                                             <ul>
                                                 <li class="clearfix">
@@ -2993,17 +2842,7 @@
                                                     <div class="form-check-inline">
                                                         <input class="form-check-input" type="checkbox" id="train_gridCheckrt-11">
                                                         <label class="form-check-label" for="train_gridCheckrt-11">
-                                                            Beijing South
-                                                        </label>
-                                                    </div><!-- ./orm-group -->
-
-                                                </li>
-                                                <li class="clearfix">
-
-                                                    <div class="form-check-inline">
-                                                        <input class="form-check-input" type="checkbox" id="train_gridCheckrt-111">
-                                                        <label class="form-check-label" for="train_gridCheckrt-111">
-                                                            Beijing
+                                                            Платов
                                                         </label>
                                                     </div><!-- ./orm-group -->
 
@@ -3058,18 +2897,18 @@
                                         <div class="col-md-6">
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>25.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>25.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                         </div><!-- /.col-md-4 -->
                                     </div><!-- /.flight-box -->
@@ -3093,18 +2932,18 @@
                                         <div class="col-md-6">
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>25.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>25.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                         </div><!-- /.col-md-4 -->
                                     </div><!-- /.flight-box -->
@@ -3128,18 +2967,18 @@
                                         <div class="col-md-6">
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>25.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>25.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                         </div><!-- /.col-md-4 -->
                                     </div><!-- /.flight-box -->
@@ -3163,18 +3002,18 @@
                                         <div class="col-md-6">
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>25.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>25.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                         </div><!-- /.col-md-4 -->
                                     </div><!-- /.flight-box -->
@@ -3198,18 +3037,18 @@
                                         <div class="col-md-6">
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>25.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>25.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                         </div><!-- /.col-md-4 -->
                                     </div><!-- /.flight-box -->
@@ -3342,7 +3181,7 @@
                                         </div><!-- /.rt-widget -->
                                         <div class="rt-widget widget_range-slider">
                                             <h3 class="rt-widget-title">
-                                                Filter by Price
+                                                Фильтровать по цене
                                             </h3><!-- /.rt-widget-title -->
 
                                             <div class="slider-range"></div>
@@ -3689,7 +3528,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -3736,7 +3575,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -3783,7 +3622,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -3830,7 +3669,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -3877,7 +3716,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -3920,7 +3759,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -3967,7 +3806,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -4014,7 +3853,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -4057,7 +3896,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -4100,7 +3939,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -4143,7 +3982,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -4186,7 +4025,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -4233,7 +4072,7 @@
                                                     </div><!-- /.left- -->
                                                     <div class="right text-left text-md-right mt-4 mt-md-0">
                                                         <span class="d-block">From USD</span>
-                                                        <span class="d-block">$364</span>
+                                                        <span class="d-block">364₽</span>
                                                     </div><!-- /.right -->
                                                 </div><!-- /.middle-text -->
                                                 <div class="footer-elements d-flex justify-content-md-between align-items-center">
@@ -4354,7 +4193,7 @@
                                                             Pay now (72)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$30</span>
+                                                    <span class="float-right">30<₽/span>
 
                                                 </li>
                                                 <li class="clearfix">
@@ -4365,7 +4204,7 @@
                                                             Pay later (425)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$32</span>
+                                                    <span class="float-right">32<₽/span>
 
                                                 </li>
                                             </ul>
@@ -4383,7 +4222,7 @@
                                                             Economy (42)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$30</span>
+                                                    <span class="float-right">30<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -4393,7 +4232,7 @@
                                                             Compact (42)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$30</span>
+                                                    <span class="float-right">30<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -4403,7 +4242,7 @@
                                                             Midsize (44)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$37</span>
+                                                    <span class="float-right">37<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -4413,7 +4252,7 @@
                                                             Standard (44)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$37</span>
+                                                    <span class="float-right">37<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -4423,7 +4262,7 @@
                                                             Full-size (44)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$37</span>
+                                                    <span class="float-right">37<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -4433,7 +4272,7 @@
                                                             Premium (60)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$38</span>
+                                                    <span class="float-right">38<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -4443,7 +4282,7 @@
                                                             Luxury (28)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$59</span>
+                                                    <span class="float-right">59<₽/span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -4453,7 +4292,7 @@
                                                             Sports Car (11)
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$250</span>
+                                                    <span class="float-right">250₽</span>
                                                 </li>
                                             </ul>
                                         </div><!-- /.rt-widget -->
@@ -4470,7 +4309,7 @@
                                                             Less than 4 seats
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$1,853.7</span>
+                                                    <span class="float-right">1,8₽53.7</span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -4480,7 +4319,7 @@
                                                             4-5 Seats
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$25.07</span>
+                                                    <span class="float-right">25.₽07</span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -4490,7 +4329,7 @@
                                                             6-7 Seats
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$200.4</span>
+                                                    <span class="float-right">200₽.4</span>
                                                 </li>
                                                 <li class="clearfix">
 
@@ -4500,7 +4339,7 @@
                                                             8-9 Seats
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$259.03</span>
+                                                    <span class="float-right">259₽.03</span>
                                                 </li>
                                             </ul>
 
@@ -4518,7 +4357,7 @@
                                                             Unlimited Mileage
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$58.94</span>
+                                                    <span class="float-right">58.₽94</span>
 
                                                 </li>
                                                 <li class="clearfix">
@@ -4529,7 +4368,7 @@
                                                             Limited Mileage
                                                         </label>
                                                     </div><!-- ./orm-group -->
-                                                    <span class="float-right">$25.07</span>
+                                                    <span class="float-right">25.₽07</span>
 
                                                 </li>
                                             </ul>
@@ -4630,7 +4469,7 @@
                                             </div><!-- /.ck-list -->
                                             <div class="price-mant text-lg-right">
                                                 <span class="d-block f-size-12 text-878">7 days</span>
-                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">$275</span>
+                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">275₽</span>
                                                 <a href="car-2.html" class="rt-btn rt-gradient pill rt-sm3 text-uppercase rt-mt-10">Select</a>
                                             </div><!-- /.price-mant -->
                                         </div><!-- /.top-content -->
@@ -4707,7 +4546,7 @@
                                             </div><!-- /.ck-list -->
                                             <div class="price-mant text-lg-right">
                                                 <span class="d-block f-size-12 text-878">7 days</span>
-                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">$275</span>
+                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">275₽</span>
                                                 <a href="car-2.html" class="rt-btn rt-gradient pill rt-sm3 text-uppercase rt-mt-10">Select</a>
                                             </div><!-- /.price-mant -->
                                         </div><!-- /.top-content -->
@@ -4784,7 +4623,7 @@
                                             </div><!-- /.ck-list -->
                                             <div class="price-mant text-lg-right">
                                                 <span class="d-block f-size-12 text-878">7 days</span>
-                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">$275</span>
+                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">275₽</span>
                                                 <a href="car-2.html" class="rt-btn rt-gradient pill rt-sm3 text-uppercase rt-mt-10">Select</a>
                                             </div><!-- /.price-mant -->
                                         </div><!-- /.top-content -->
@@ -4861,7 +4700,7 @@
                                             </div><!-- /.ck-list -->
                                             <div class="price-mant text-lg-right">
                                                 <span class="d-block f-size-12 text-878">7 days</span>
-                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">$275</span>
+                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">275₽</span>
                                                 <a href="car-2.html" class="rt-btn rt-gradient pill rt-sm3 text-uppercase rt-mt-10">Select</a>
                                             </div><!-- /.price-mant -->
                                         </div><!-- /.top-content -->
@@ -4938,7 +4777,7 @@
                                             </div><!-- /.ck-list -->
                                             <div class="price-mant text-lg-right">
                                                 <span class="d-block f-size-12 text-878">7 days</span>
-                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">$275</span>
+                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">275₽</span>
                                                 <a href="car-2.html" class="rt-btn rt-gradient pill rt-sm3 text-uppercase rt-mt-10">Select</a>
                                             </div><!-- /.price-mant -->
                                         </div><!-- /.top-content -->
@@ -5015,7 +4854,7 @@
                                             </div><!-- /.ck-list -->
                                             <div class="price-mant text-lg-right">
                                                 <span class="d-block f-size-12 text-878">7 days</span>
-                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">$275</span>
+                                                <span class="d-block text-primary f-size-24 rt-semiblod title-font">275₽</span>
                                                 <a href="car-2.html" class="rt-btn rt-gradient pill rt-sm3 text-uppercase rt-mt-10">Select</a>
                                             </div><!-- /.price-mant -->
                                         </div><!-- /.top-content -->
@@ -5083,7 +4922,7 @@
                                     <div class="rt-sidebar-group">
                                         <div class="rt-widget widget_range-slider">
                                             <h3 class="rt-widget-title">
-                                                Filter by Price
+                                                Фильтровать по цене
                                             </h3><!-- /.rt-widget-title -->
 
                                             <div class="slider-range"></div>
@@ -5265,18 +5104,18 @@
                                         <div class="col-md-6">
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>25.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>25.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                         </div><!-- /.col-md-4 -->
                                     </div><!-- /.flight-box -->
@@ -5300,18 +5139,18 @@
                                         <div class="col-md-6">
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>25.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>25.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                         </div><!-- /.col-md-4 -->
                                     </div><!-- /.flight-box -->
@@ -5335,18 +5174,18 @@
                                         <div class="col-md-6">
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>25.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>25.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                         </div><!-- /.col-md-4 -->
                                     </div><!-- /.flight-box -->
@@ -5370,18 +5209,18 @@
                                         <div class="col-md-6">
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>25.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>25.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                         </div><!-- /.col-md-4 -->
                                     </div><!-- /.flight-box -->
@@ -5405,18 +5244,18 @@
                                         <div class="col-md-6">
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>25.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>25.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between rt-mb-15">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                             <div class="d-flex justify-content-between">
                                                 <span class="f-size-14 text-333">2nd Class</span>
-                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12">$</span>55.33</span>
-                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">Book</a>
+                                                <span class="f-size-24 text-primary rt-semiblod title-font"><span class="f-size-12"></s₽pan>55.33</span>
+                                                <a href="train-2.html" class="rt-btn rt-gradient rt-sm3 pill text-uppercase">В корзину</a>
                                             </div><!-- /.d-flex  -->
                                         </div><!-- /.col-md-4 -->
                                     </div><!-- /.flight-box -->

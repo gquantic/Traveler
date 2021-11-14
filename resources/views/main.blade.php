@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    <link rel="stylesheet" href="{{ asset('/css/awesome_checkbox.css') }}">
     <section class="rt-banner-area">
         <div class="single-rt-banner rt-banner-height" style="background-image: url(images/all-img/banner01.png)">
             <div class="container">
@@ -76,27 +77,46 @@
                                     <div class="tab-pane show active" id="rt-item_a_first" role="tabpanel" aria-labelledby="rt-item_a_first">
                                         <form action="{{ route('make-road') }}" method="get" id="form-cards">
                                             @csrf
-                                            <div class="rt-input-group d-flex align-items-center effect-input hide" id="question1">
-                                                <div class="single-input  col-rt-in-8" style="width: 400px;">
-                                                    <input type="text" class="form-control" placeholder=""
-                                                           name="from" onclick="">
-                                                    <button type="button"><i class="icofont-location-arrow"></i></button>
-                                                </div>
+                                            <div class="rt-input-group effect-input hide dialog-item" id="question1">
                                                 <div class="msg">
                                                     Введите город отправления
                                                 </div>
+                                                <div class="single-input col-rt-in-12">
+                                                    <input type="text" class="form-control" placeholder=""
+                                                           name="from" id="from" onclick="roadMaker('from')">
+                                                    <button type="button"><i class="icofont-location-arrow"></i></button>
+                                                </div>
                                             </div>
 
-                                            <div class="d-flex align-items-center mt-4 effect-input hide" id="question2">
-                                                <div class="single-input mr-3 d-flex justify-content-start" style="width: 30px;height: 30px;">
-                                                    <label for="fastyes" class="d-flex align-items-center mr-3">
-                                                        <input type="radio" name="fast_delivery" id="fastyes" value="yes">
-                                                        <p class="mb-0 ml-2">Да</p>
-                                                    </label>
-                                                    <label for="fastno" class="d-flex align-items-center">
-                                                        <input type="radio" name="fast_delivery" id="fastno" value="no">
-                                                        <p class="mb-0 ml-2">Нет</p>
-                                                    </label>
+{{--                                            <div class="d-flex align-items-center mt-4 effect-input hide" id="question2">--}}
+{{--                                                <div class="single-input mr-3 d-flex justify-content-start" style="width: 30px;height: 30px;">--}}
+{{--                                                    <label for="fastyes" class="d-flex align-items-center mr-3">--}}
+{{--                                                        <input type="radio" name="fast_delivery" id="fastyes" value="yes">--}}
+{{--                                                        <p class="mb-0 ml-2">Да</p>--}}
+{{--                                                    </label>--}}
+{{--                                                    <label for="fastno" class="d-flex align-items-center">--}}
+{{--                                                        <input type="radio" name="fast_delivery" id="fastno" value="no">--}}
+{{--                                                        <p class="mb-0 ml-2">Нет</p>--}}
+{{--                                                    </label>--}}
+{{--                                                </div>--}}
+{{--                                                <div class="msg" style="margin-left: 40px;">--}}
+{{--                                                    Желаете получить расчет от двери до двери?--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+
+                                            <div class="d-flex align-items-center mt-4 effect-input" id="question2">
+                                                <div class="button_checkbox__block" id="awesome_checkbox">
+                                                    <input type="hidden" name="checkbox" id="checkbox" value="no">
+                                                    <div class="button_checkbox active" data-value="no">Нет</div>
+                                                    <div class="slideThree">
+                                                        <input type="checkbox" value="Yes" id="slideThree" name="check" checked="">
+                                                        <label for="slideThree" class="slideThree_label">
+                                                            <span></span>
+                                                            <span></span>
+                                                            <span></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="button_checkbox" data-value="yes">Да</div>
                                                 </div>
                                                 <div class="msg" style="margin-left: 40px;">
                                                     Желаете получить расчет от двери до двери?
@@ -106,10 +126,10 @@
                                             <div class="rt-input-group d-flex align-items-center effect-input hide mt-4" id="question3">
                                                 <div class="single-input  col-rt-in-8" style="width: 400px;">
                                                     <input type="text" class="form-control" placeholder=""
-                                                           name="from">
+                                                           name="from_detals">
                                                     <button type="button"><i class="icofont-location-arrow"></i></button>
                                                 </div>
-                                                <div class="msg" id="msg">
+                                                <div class="msg" id="msg1">
                                                     Введите адрес Вашего местонахождения
                                                 </div>
 
@@ -121,7 +141,7 @@
                                             <div class="rt-input-group d-flex align-items-center effect-input hide mt-4" id="question4">
                                                 <div class="single-input  col-rt-in-8" style="width: 400px;">
                                                     <input type="text" class="form-control" placeholder=""
-                                                           name="where">
+                                                           name="where" id="where" onclick="roadMaker('where')">
                                                     <button type="button"><i class="icofont-location-arrow"></i></button>
                                                 </div>
                                                 <div class="msg" id="msg">
@@ -505,4 +525,6 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div>
+
+    <script src="{{ asset('/js/awesome_checkbox.js') }}"></script>
 @endsection

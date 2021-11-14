@@ -17,6 +17,11 @@ Route::get('/', function (\App\Http\Controllers\CityController $cityController) 
     return view('main', ['cityController' => $cityController]);
 });
 
+Route::view('/about', 'about')->name('about');
+Route::view('/composite-tickets', 'tickets.composite')->name('tickets.composite');
+Route::view('/help', 'help')->name('help');
+Route::view('/contacts', 'contacts')->name('contacts');
+
 Route::get('/make-road/{from}/{more}', function (\App\Http\Controllers\TravelController $travel,
                                                  App\Http\Controllers\CityController $cityController, $from, $more) {
     $price = $travel->setPrice("plane", 15000);

@@ -2,32 +2,37 @@ $(document).ready(function () {
     setTimeout(function () {
         $('#question1').removeClass('hide');
         typeText('#question1 .msg');
+        typeText('#question2 .msg');
     }, 1000);
 
     // После ввода первого поля
     $('#question1 button').on('click', function () {
         if ($('#question1 input').val().length >= 2) {
             $('#question2').removeClass('hide');
-            typeText('#question2 .msg');
+            $('#question3').removeClass('hide');
+
+            typeText('#question3 #msg1');
+
+            if ($('#awesome_checkbox input[type="checkbox"]').is(":checked") === true) {
+                $('#question3').removeClass('hide');
+                typeText('#question3 #msg');
+
+                $('#question4').addClass('hide');
+            } else {
+                $('#question3').addClass('hide');
+
+                // Показываем 4й элемент
+                $('#question4').removeClass('hide');
+                typeText('#question4 #msg');
+            }
         } else {
             alert("Пожалуйста, заполните поле!");
         }
     });
 
     // После выбора точности (2 элемент)
-    $('input[name="fast_delivery"]').on('input', function () {
-        if ($(this).val() === "yes") {
-            $('#question3').removeClass('hide');
-            typeText('#question3 #msg');
-
-            $('#question4').addClass('hide');
-        } else {
-            $('#question3').addClass('hide');
-
-            // Показываем 4й элемент
-            $('#question4').removeClass('hide');
-            typeText('#question4 #msg');
-        }
+    $('#awesome_checkbox input[type="checkbox"]').on('change', function () {
+        // Тут был код, перенес его в действие с первым инпатом
     });
 
     $('#question4 button').on('click', function () {
@@ -55,12 +60,12 @@ $(document).ready(function () {
     $('#question3 button').on('click', function() {
         if ($('#question3 input').val().length >= 4) {
             $('#question3 #msg2').removeClass('hide');
-            typeText('#question3 #msg2', 500);
+            typeText('#question3 #msg2');
 
             // Показываем 4й элемент
             setTimeout(function () {
                 $('#question4').removeClass('hide');
-                typeText('#question4 .msg');
+                // typeText('#question4 .msg');
             }, 1000);
         } else {
             alert("Пожалуйста, заполните поле!");
