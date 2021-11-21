@@ -50,8 +50,30 @@ $(document).ready(function () {
     });
 
     $('#question6 input').on('change', function () {
+        if ($(this).val() == "yes") {
+            // Если отменчено ДА, то показываем еще форму
+            $('#question7').removeClass('hide');
+            typeText('#question7 .msg');
+
+            // Выводим финальное сообщение
+            $('#question8').addClass('hide'); 
+        } else {
+            // Если нет, то скрываем
+            $('#question7').addClass('hide');
+
+            // Выводим финальное сообщение
+            $('#question8').removeClass('hide');
+            typeText('#question8 .msg');
+        }
+
         // Показываем кнопку
         $('#orderPay').removeClass('hide');
+    });
+
+    $('#question7 input').on('change', function () {
+        // Выводим финальное сообщение
+        $('#question8').removeClass('hide');
+        typeText('#question8 .msg');
     });
 
 

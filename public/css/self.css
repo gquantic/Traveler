@@ -4,6 +4,17 @@
     outline: none !important;
 }
 
+.flight-list-box .flight-logo {
+    border: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flight-list-box .flight-logo img {
+    max-width: 63px;
+}
+
 .serachnavs li a {
     width: 100px;
 }
@@ -155,8 +166,12 @@ label[for] {
     position: relative;
 }
 
+.rt-banner-height {
+    height: fit-content;
+}
+
 .info-selfcontent {
-    margin-top: 300px;
+    margin-top: 50px;
 }
 
 .exp-row__title-link {
@@ -166,11 +181,156 @@ label[for] {
 
 
 
+/* Tabs */
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    color: #000;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link i {
+    margin-right: 5px;
+    margin-left: -5px;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: #4a56f9;
+
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+
+    border-bottom: 2px solid #4a56f9;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link, .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link a {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+
+    border-bottom: 2px solid rgba(0,0,0,0);
+}
+
+.group-icons .second {
+    transform: translateX(-10px);
+}
+
+i.avia {
+    background: #847eef;
+    padding: 5px;
+    border-radius: 50%;
+    color: #fff !important;
+}
+
+i.train {
+    background: #f92853;
+    padding: 5px;
+    border-radius: 50%;
+    color: #fff !important;
+}
+
+i.bus {
+    background: #84c03b;
+    padding: 5px;
+    border-radius: 50%;
+    color: #fff !important;
+}
 
 
 /* Viewport */
 
 @media (max-width: 900px) {
+    html, body {
+        overflow-x: hidden !important;
+        width: 100%;
+    }
+
+    p {
+        font-size: 19px;
+    }
+
+    .rt-section-title span {
+        font-size: 16px;
+    }
+
+    .rt-section-title {
+        font-size: 45px;
+        line-height: 38px;
+    }
+
+    .services-box-1 h4 {
+        font-size: 32px;
+    }
+
+    .services-box-1 p {
+        font-size: 17px;
+    }
+
+    .cta-box-1 h4 {
+        font-size: 24px;
+    }
+
+    .cta-box-1 p {
+        font-size: 16px;
+        line-height: 17px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .cta-box-1 h4 span {
+        font-size: 19px;
+        line-height: 20px !important;
+    }
+
+    .container {
+        margin-left: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+    }
+
+    .rt-banner-height {
+        height: fit-content;
+    }
+
+    .rt-banner-height .col-lg-9 {
+        margin-top: 0px;
+    }
+
+    .rt-site-header.rt-fixed-top, .main-header.rt-fixed-top {
+        position: relative;
+        background: #9232f5;
+    }
+
+    .menu-click {
+        background: rgba(0,0,0,0);
+    }
+
+    .menu-click span {
+        background: #fff;
+    }
+
+    .main-menu ul {
+        border: none !important;
+    }
+
+    .single-rt-banner .rt-banner-content h1 {
+        font-size: 54px;
+        line-height: 47px;
+    }
+
+    .single-rt-banner .rt-banner-content p {
+        font-size: 22px;
+    }
+
     .dialog-item {
         width: 100%;
         margin: 0 auto;
@@ -190,10 +350,55 @@ label[for] {
     }
 
     .info-selfcontent {
-        margin-top: 700px;
+        margin-top: 50px;
     }
 
     form button {
         float: right;
+    }
+
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+        width: 100% !important;
+    }
+
+    .nav-tabs .nav-item {
+        width: 50%;
+        margin-bottom: 15px;
+    }
+
+    .modal-tickets-tab {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .modal-tickets-tab .group-icons {
+        margin-left: -17px;
+    }
+
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+        text-align: left;
+    }
+
+    .serachnavs {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .serachnavs li {
+        width: 19%;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .serachnavs li:nth-child(1) {
+        width: 100%;
+    }
+    .serachnavs li:nth-child(1) a {
+        border-radius: 4px;
+    }
+
+    .serachnavs li a {
+        width: 100% !important;
+        border-radius: 50%;
     }
 }

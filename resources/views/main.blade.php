@@ -25,7 +25,12 @@
                                     <a class="nav-link active" id="first-tab" data-target="#rt-item_b_first" data-secondary="#rt-item_a_first"
                                        style="width: 150px;"
                                        data-toggle="tab" href="#first" role="tab" aria-controls="first-tab" aria-selected="false">
-                                        <i class="icofont-airplane"></i>
+                                        <span>
+                                            <i class="icofont-airplane"></i>
+                                            <i class="icofont-car-alt-4"></i>
+                                            <i class="icofont-train-line"></i>
+                                            <i class="icofont-car-alt-4"></i>
+                                        </span>
                                         <span>Составной</span>
                                     </a>
                                 </li>
@@ -138,7 +143,7 @@
 
                                             <div class="rt-input-group effect-input hide mt-2 dialog-item" id="question4">
                                                 <div class="msg" id="msg" style="margin-left: -41px;">
-                                                    Введите город и адрес пребытия
+                                                    Введите город пребытия
                                                 </div>
                                                 <div class="single-input  col-rt-in-8" style="width: 400px;">
                                                     <input type="text" class="form-control" placeholder=""
@@ -153,7 +158,7 @@
                                                 </div>
                                                 <div class="single-input col-rt-in-8" style="width: 400px;">
                                                     <input type="date" class="form-control" placeholder=""
-                                                           name="from">
+                                                           name="fromtime">
                                                 </div>
                                             </div>
 
@@ -172,6 +177,23 @@
                                                     </label>
                                                 </div>
                                             </div>
+
+                                            <div class="rt-input-group effect-input hide mt-4 dialog-item" id="question7">
+                                                <div class="msg" id="msg" style="margin-left: -41px;">
+                                                    Когда вы хотите обратно?
+                                                </div>
+                                                <div class="single-input col-rt-in-8" style="width: 400px;">
+                                                    <input type="date" class="form-control" placeholder=""
+                                                           name="backtime">
+                                                </div>
+                                            </div>
+
+                                            <div class="rt-input-group effect-input hide mt-4 dialog-item" id="question8">
+                                                <div class="msg" id="msg" style="margin-left: -73px;width: 738px;padding-left: 90px;">
+                                                     Отлично! Вся информация введена, для поиска билетов нажмите кнопку "Найти"
+                                                </div>
+                                            </div>
+
                                             <button style="transform: translateY(20px);height: 50px;width: 200px;font-size: 17px;line-height: 18px !important;"
                                                     class="effect-input rt-btn rt-gradient2 rt-rounded text-uppercase rt-Bshadow-1 hide" id="orderPay">
                                                 Найти

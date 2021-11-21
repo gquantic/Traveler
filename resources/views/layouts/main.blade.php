@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
     <title>@yield('page-title') | Ecupay</title>
     <link rel="icon" type="image/png" href="/images/favicon.png">
     <!-- ==================Start Css Link===================== -->
@@ -49,6 +49,8 @@
   <div class="rt-preloder">
     <div class="preloder-box">
         <img src="/images/all-img/preloder.svg" alt="preloder image" draggable="false">
+        <br>
+        <h4 style="color: #fd6277;margin-left: -10px;">Ecutravel</h4>
     </div><!-- /.preloder-box -->
 </div><!-- /.rt-preloder -->
 

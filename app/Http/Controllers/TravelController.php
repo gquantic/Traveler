@@ -36,7 +36,9 @@ class TravelController extends Controller
 
         $request = $this->api->query('Bus', 'Search/RacePricing');
 
-//        dd($request);
+        // if (!isset($_GET['tickets_type'])) {
+        //     return view('select-type', ['params' => $_GET]);
+        // }
 
         return view('form-order', ['cityController' => CityController::class, 'data' => [$_GET, $moreInfo]]);
     }

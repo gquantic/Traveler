@@ -22,10 +22,14 @@ Route::view('/composite-tickets', 'tickets.composite')->name('tickets.composite'
 Route::view('/help', 'help')->name('help');
 Route::view('/contacts', 'contacts')->name('contacts');
 
-Route::get('/make-road/{from}/{more}', function (\App\Http\Controllers\TravelController $travel,
-                                                 App\Http\Controllers\CityController $cityController, $from, $more) {
-    $price = $travel->setPrice("plane", 15000);
-    return view('flight', ['data' => [$from, $more], 'cityController' => $cityController]);
+// Route::get('/make-road/{from}/{more}', function (\App\Http\Controllers\TravelController $travel,
+//                                                  App\Http\Controllers\CityController $cityController, $from, $more) {
+//     $price = $travel->setPrice("plane", 15000);
+//     return view('flight', ['data' => [$from, $more], 'cityController' => $cityController]);
+// });
+
+Route::get('/race/{id}', function ($id) {
+    return view('tickets.race', ['race' => $id]);
 });
 
 Route::get('/order', [\App\Http\Controllers\TravelController::class, 'makeRoad'])->name('make-road');
