@@ -46,7 +46,6 @@
                                        data-toggle="tab" href="#second" role="tab" aria-controls="second-tab" aria-selected="true" -->
                                 <li class="nav-item">
                                     <a class="nav-link inactive">
-
                                         <i class="icofont-hotel"></i>
                                         <span>Отели</span>
                                     </a>
@@ -108,7 +107,7 @@
                                                         <button type="button"><i class="icofont-location-arrow"></i></button>
                                                     </div>
                                                 </div>
-                                                
+
                                             </div>
 
 {{--                                            <div class="d-flex align-items-center mt-4 effect-input hide" id="question2">--}}

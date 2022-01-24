@@ -144,26 +144,26 @@ aria-hidden="true">
             </div><!-- /.rt-modal-headr -->
             <div class="rt-modal-headr rt-mb-20 two">
                 <img src="/images/logo/Logo-icon.png" alt="modal logo" draggable="false">
-                <h4>Create your Account</h4>
+                <h4>Создайте профиль</h4>
                 <p>Log in to get in the moment updates on the things
                 that interest you.</p>
             </div><!-- /.rt-modal-headr -->
             <div class="rt-modal-input one">
                 <form action="#" class="rt-form">
-                    <input type="text" class="form-control pill rt-mb-15" placeholder="User name">
-                    <input type="password" class="form-control pill rt-mb-15" placeholder="Password">
+                    <input type="text" class="form-control pill rt-mb-15" placeholder="Введите почту">
+                    <input type="password" class="form-control pill rt-mb-15" placeholder="Пароль">
                     <div class="form-group forgot-pass">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheckss">
                             <label class="form-check-label" for="gridCheckss">
-                                Remember Password
+                                Запомнить пароль
                             </label>
                         </div><!-- ./orm-group -->
                     </div>
-                    <input type="submit" class="rt-btn rt-gradient pill d-block text-uppercase " value="Log In">
+                    <input type="submit" class="rt-btn rt-gradient pill d-block text-uppercase " value="Войти">
                 </form>
                 <div class="ac-register">
-                    <span>Don’t have an account? <a href="#" class="open-creatac">Sign Up Now <i class="icofont-double-right"></i></a></span>
+                    <span>Нет профиля? <a href="#" class="open-creatac">Создайте прямо сейчас <i class="icofont-double-right"></i></a></span>
                 </div><!-- /.ac-register -->
             </div><!-- /.rt-modal-input -->
             <div class="rt-modal-input two">
@@ -192,16 +192,16 @@ aria-hidden="true">
 
                 </div><!-- /.ac-register -->
             </div><!-- /.rt-modal-input -->
-            <div class="rt-modal-footer">
-                <span>Or</span>
-                <h4>Sign Up with social media</h4>
-                <ul class="rt-social rt-circle-style2">
+{{--            <div class="rt-modal-footer">--}}
+{{--                <span>Or</span>--}}
+{{--                <h4>Sign Up with social media</h4>--}}
+{{--                <ul class="rt-social rt-circle-style2">--}}
 
-                    <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                    <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                    <li><a href="#"><i class="icofont-linkedin"></i></a></li>
-                </ul>
-            </div><!-- /.rt-modal-footer -->
+{{--                    <li><a href="#"><i class="icofont-facebook"></i></a></li>--}}
+{{--                    <li><a href="#"><i class="icofont-twitter"></i></a></li>--}}
+{{--                    <li><a href="#"><i class="icofont-linkedin"></i></a></li>--}}
+{{--                </ul>--}}
+{{--            </div><!-- /.rt-modal-footer -->--}}
         </div>
     </div>
 </div>

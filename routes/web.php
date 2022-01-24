@@ -32,4 +32,12 @@ Route::get('/race/{id}', function ($id) {
     return view('tickets.race', ['race' => $id]);
 });
 
+Route::get('/api', function (\App\Http\Controllers\ApiController $api) {
+    return view('api', ['api' => $api]);
+});
+
 Route::get('/order', [\App\Http\Controllers\TravelController::class, 'makeRoad'])->name('make-road');
+
+Route::get('test', function (\App\Http\Controllers\ApiController $apiController) {
+    $apiController->init(["param1", "ost1", "a1", "c3",  ['f1' => ['g', 'e'], 'a2']]);
+});
