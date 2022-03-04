@@ -34,12 +34,13 @@ class TravelController extends Controller
         if (isset($_GET['moreInfo']) && $_GET['moreInfo'] == "true") $moreInfo = true;
         elseif (!isset($_GET['moreInfo']) || $_GET['moreInfo'] != "true") $moreInfo = false;
 
-        $request = $this->api->query('Bus', 'Search/RacePricing');
+//        $request = $this->api->query('Bus', 'Search/RacePricing');
 
         // if (!isset($_GET['tickets_type'])) {
         //     return view('select-type', ['params' => $_GET]);
         // }
 
-        return view('form-order', ['cityController' => CityController::class, 'data' => [$_GET, $moreInfo]]);
+//        return view('form-order', ['cityController' => CityController::class, 'data' => [$_GET, $moreInfo]]);
+        return view('tickets.search');
     }
 }

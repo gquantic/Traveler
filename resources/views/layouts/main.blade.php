@@ -29,6 +29,7 @@
     <!-- ==================End Css Link===================== -->
 
     <link rel="stylesheet" href="{{ asset('/plugins/roadmaker/roadmaker.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/self-murad.css') }}">
 
     <!--[if lt IE 9]>
     <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

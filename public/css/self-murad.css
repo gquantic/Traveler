@@ -1,0 +1,37 @@
+.card-race {
+  width: 280px;
+  min-width: 280px;
+  height: 267px;
+  color: #fff;
+  border-radius: 29px;
+  padding: 23px;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+}
+.card-race .arrow {
+  margin-top: 80px;
+  float: right;
+}
+.card-race h6 {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+.card-race i {
+  font-size: 30px;
+  background: none !important;
+  padding: 0px;
+}
+
+.card-race-hover-effect:nth-child(1):hover {
+  transform: translateX(-130px);
+}
+
+.card-race-hover-effect:nth-child(2):hover {
+  transition: 0.5s ease;
+  transform: translateX(-330px) !important;
+  cursor: pointer;
+}
