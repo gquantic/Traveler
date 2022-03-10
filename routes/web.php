@@ -38,6 +38,14 @@ Route::get('/api', function (\App\Http\Controllers\ApiController $api) {
 
 Route::get('/order', [\App\Http\Controllers\TravelController::class, 'makeRoad'])->name('make-road');
 
+//Route::get('/road/make/{with}/{params}', function ($with, $params) {
+//    dd(explode(':', $params));
+//})->name('make-road');
+
+Route::get('/road/make/{with}', function ($with) {
+    dd(Session::all());
+});
+
 Route::get('test', function (\App\Http\Controllers\ApiController $apiController) {
     $apiController->init(["param1", "ost1", "a1", "c3",  ['f1' => ['g', 'e'], 'a2']]);
 });

@@ -29,18 +29,32 @@ class TravelController extends Controller
         return $this->price;
     }
 
-    public function makeRoad()
+    public function makeRoad(Request $request)
     {
-        if (isset($_GET['moreInfo']) && $_GET['moreInfo'] == "true") $moreInfo = true;
-        elseif (!isset($_GET['moreInfo']) || $_GET['moreInfo'] != "true") $moreInfo = false;
+        if (isset($request->moreInfo) && $request->moreInfo == "true") $moreInfo = true;
+        elseif (!isset($request->moreInfo) || $request->moreInfo != "true") $moreInfo = false;
 
-//        $request = $this->api->query('Bus', 'Search/RacePricing');
+        $request->session()->put('params', $_GET);
+        $request->session()->put('self', 'Okay bro)))');
 
-        // if (!isset($_GET['tickets_type'])) {
-        //     return view('select-type', ['params' => $_GET]);
-        // }
+        /**
+         * Преобразуем массив GET в строку для дальнейшей передачи
+         */
+        $paramsAtString = '';
+//        foreach ($request->all() as $item) {
+//            $paramsAtString = "$paramsAtString$item:";
+//        }
 
-//        return view('form-order', ['cityController' => CityController::class, 'data' => [$_GET, $moreInfo]]);
-        return view('tickets.search');
+        return view('tickets.search', compact('paramsAtString'));
+
+        /**
+         *  @var boolean checkbox => no
+         *  @var string  from => "Ростов-на-Дону"
+         *  @var string  from_detals => null
+         *  @var string  where => "Метро Павелецкая"
+         *  @var string  fromtime => "2022-03-13"
+         *  @var string  total_count => "no"
+         *  @var string  backtime => null
+         */
     }
 }

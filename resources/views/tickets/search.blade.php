@@ -73,7 +73,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="col-12 d-flex">
-                        <a href="">
+                        <a href="/road/make/train/">
                             <div class="card-race card-race-hover-effect" style="background: #F92853;">
                                 <i class="icofont-train-line train"></i>
 
@@ -91,7 +91,7 @@
                             </div>
                         </a>
                         <div class="card-race card-race-hover-effect" style="background: #6D3EFF;transform: translateX(-200px);">
-                            <a href="" class="text-white">
+                            <a href="/road/make/avia/" class="text-white">
                                 <i class="icofont-airplane-alt avia"></i>
 
                                 <h6>Минимальная цена</h6>
@@ -107,7 +107,7 @@
                                 </div>
                             </a>
                         </div>
-                        <a href="">
+                        <a href="/road/make/bus/">
                             <div class="card-race" style="background: #84C03B;transform: translateX(-400px);">
                                 <i class="icofont-bus-alt-1 bus"></i>
 
