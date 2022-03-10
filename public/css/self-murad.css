@@ -8,6 +8,7 @@
   transition: 0.5s ease;
   cursor: pointer;
   position: relative;
+  box-shadow: -4px 4px 14px rgba(0, 0, 0, 0.1);
 }
 .card-race .arrow {
   margin-top: 80px;
@@ -34,4 +35,13 @@
   transition: 0.5s ease;
   transform: translateX(-330px) !important;
   cursor: pointer;
+}
+
+.by-btn {
+  width: 216px;
+  height: 49px;
+  background: linear-gradient(to right, #7040FF, #9862FF);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
 }

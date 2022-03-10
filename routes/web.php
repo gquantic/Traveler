@@ -43,7 +43,7 @@ Route::get('/order', [\App\Http\Controllers\TravelController::class, 'makeRoad']
 //})->name('make-road');
 
 Route::get('/road/make/{with}', function ($with) {
-    dd(Session::all());
+    return view('tickets.composite', compact('with'));
 });
 
 Route::get('test', function (\App\Http\Controllers\ApiController $apiController) {
