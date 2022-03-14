@@ -10,6 +10,20 @@
   position: relative;
   box-shadow: -4px 4px 14px rgba(0, 0, 0, 0.1);
 }
+
+.card-race {
+    width: 280px;
+    min-width: 250px;
+    height: 215px;
+    color: #fff;
+    border-radius: 29px;
+    padding: 23px;
+    transition: 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    box-shadow: -4px 4px 14px rgba(0, 0, 0, 0.1);
+}
+
 .card-race .arrow {
   margin-top: 80px;
   float: right;
@@ -37,6 +51,10 @@
   cursor: pointer;
 }
 
+.card-results h3 {
+  font-size: 24px;
+}
+
 .by-btn {
   width: 216px;
   height: 49px;
@@ -44,4 +62,46 @@
   color: #fff;
   border: none;
   border-radius: 10px;
+}
+
+/**
+ ** GADJI
+ */
+.card-racecm {
+  width: 60px;
+  min-width: 235px;
+  height: 190px;
+  color: #fff;
+  border-radius: 29px;
+  padding: 23px;
+  transition: 0.5s ease;
+  cursor: pointer;
+  position: relative;
+  box-shadow: -4px 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.card-racemini .arrowmini {
+  margin-top: 20px;
+  float: right;
+}
+
+.card-racecm.arrowcm {
+  margin-top: 20px;
+  float: right;
+}
+
+.card-racemini h6 {
+  color: #fff !important;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.card-race span {
+  color: #fff;
+}
+
+.card-racemini span {
+  color: #fff;
 }

@@ -19,8 +19,6 @@ white-menu
             <div class="col-12">
                 <div class="breadcrumbs-content">
                     <h3>Сложное - Легко!</h3>
-
-
                     </div><!-- /.breadcrumbs -->
                 </div><!-- /.breadcrumbs-content -->
             </div><!-- /.col-12 -->
@@ -57,7 +55,7 @@ white-menu
                         Получите полный расчет выгодного предложения Вашего маршрута подобранного агрегатором EcuTravel.
                         </p>
                 </div><!-- /.text-424 -->
-               
+
             </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
         <div class="row align-items-center">
@@ -69,11 +67,11 @@ white-menu
                 <div class="text-424">
                     <p class="f-size-14 ">Оформления и покупка билета производится на нашем сайте  .
                     Вам нужно выбрать наиболее подходящий стыковочный маршрут, предложенный нашим агрегатором
-                    далее перейти на страницу оформления, ввести один раз данные пассажиров и получить билеты на все виды транспорта 
+                    далее перейти на страницу оформления, ввести один раз данные пассажиров и получить билеты на все виды транспорта
                     в выбранном составном рейсе
                     </p>
                 </div><!-- /.text-424 -->
-            
+
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-6 offset-lg-1">
                 <div class="rt-icon rt-hw-45 rt-circle icon-glow-1 icon-gradinet-1 f-size-20">
@@ -96,11 +94,11 @@ white-menu
                 <h4 class="f-size-24 rt-semiblod rt-mb-20">В добрый путь! </h4>
                 <div class="text-424">
                     <p class="f-size-14 ">Наша интелектуальная система подберет стыковочные рейсы настолько удобно, что
-                    Вам не надо будет беспокоиться о том, где и сколько времени неообходимо, чтобы переждать время между пересадками. 
+                    Вам не надо будет беспокоиться о том, где и сколько времени неообходимо, чтобы переждать время между пересадками.
                     Вы получите максимально бесшовный составной маршрут, и соответственно сэкономите и деньги и время
                     </p>
                 </div><!-- /.text-424 -->
-        
+
             </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
     </div><!-- ./ copntainer -->
@@ -139,7 +137,7 @@ white-menu
             <div class="col-xl-10 mx-auto text-center">
                 <div class="rt-section-title-wrapper">
                     <h2 class="rt-section-title"><span>Это безопасно!</span>
-                    
+
                     Защита ваших данных</h2>
                     <p>Мы работаем над защитой вашей личной информации, используя соответствующие и общепринятые меры предосторожности
                    </p>
@@ -151,20 +149,20 @@ white-menu
             <div class="col-lg-5 mb-0 mb-md-4">
                 <div class="icon-thumb rt-mb-30">
                     <img src="/images/all-img/iconx-1.png" alt="icon-image" draggable="false">
-                </div><!-- /.icon-thumb --> 
+                </div><!-- /.icon-thumb -->
                 <h4 class="f-size-24 rt-semiblod rt-mb-20">Персональная поддержка</h4>
                 <div class="text-424">
                     <ul class="rt-list">
-                        <li><span class="rt-pr-4"><i class="icofont-check-circled"></i></span> В случае возникновения спорных вопросов наш сервис 
+                        <li><span class="rt-pr-4"><i class="icofont-check-circled"></i></span> В случае возникновения спорных вопросов наш сервис
                             обеспечит персональную поддержку.
                            </li>
                         <li><span class="rt-pr-4"><i class="icofont-check-circled"></i></span>Не разберетесь с пересадками? Наш менеджер всегда рядом,
                             и доступен 24/7.</li>
-                    
+
                     </ul>
                 </div><!-- /.text-424 -->
                 <a href="#" class="rt-btn rt-gradient rt-rounded text-uppercase rt-sm rt-mt-25">Связаться с нами</a>
-        
+
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-6 offset-lg-1">
                 <img src="/images/all-img/work-img-4.png" alt="work image" draggable="false">
@@ -173,7 +171,7 @@ white-menu
         <div class="section-title-spacer"></div><!-- /.section-title-spacer -->
         <div class="row align-items-center">
             <div class="col-lg-6 mb-0 mb-md-4">
-               
+
                 <img src="/images/all-img/work-img-5.png" alt="work image" draggable="false">
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-5 offset-lg-1">
@@ -186,16 +184,16 @@ white-menu
                         <li><span class="rt-pr-4"><i class="icofont-check-circled"></i></span> Мы работаем только с проверенными перевозчиками и компаниями, что обеспечивает гарантию
                         от мошенничества.</li>
                        <li><span class="rt-pr-4"><i class="icofont-check-circled"></i></span>EcuTravel возмести ущерб и вернет стоимость затраченных средств на билет в случае непредвиденных обстоятельств.</li>
-                      
-                      
+
+
                     </ul>
                 </div><!-- /.text-424 -->
                 <a href="#" class="rt-btn rt-gradient rt-rounded text-uppercase rt-sm rt-mt-25">Подробнее</a>
 
             </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->
-        
-        
+
+
     </div><!-- ./ copntainer -->
 </section>
 @endsection
