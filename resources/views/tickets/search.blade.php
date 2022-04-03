@@ -195,239 +195,241 @@
                                             </div><!-- /.flight-list-box -->
                                         </div><!-- /.col-lg-12 -->
                                         <div class="col-lg-12 col-md-6">
-                                            <div class="flight-list-box rt-mb-30">
-                                                <div class="top-content d-flex flex-lg-row flex-column align-items-lg-center  justify-content-lg-between">
-                                                    <div class="col-lg-5 col-md-12">
-                                                        <div class="d-flex">
-                                                            <div class="col-8 d-flex">
+                                            @foreach($tickets as $ticket)
+                                                <div class="flight-list-box rt-mb-30">
+                                                    <div class="top-content d-flex flex-lg-row flex-column align-items-lg-center  justify-content-lg-between">
+                                                        <div class="col-lg-5 col-md-12">
+                                                            <div class="d-flex">
+                                                                <div class="col-8 d-flex">
 
-                                                                <div class="card-race card-race-hover-effect" style="background: #F92853;">
-                                                                    <a href="">
-                                                                        <i class="icofont-train-line train"></i>
+                                                                    <div class="card-race card-race-hover-effect" style="background: #F92853;">
+                                                                        <a href="">
+                                                                            <i class="icofont-train-line train"></i>
 
-                                                                        <h6>Минимальная цена</h6>
-                                                                        <span>1500 руб.</span>
+                                                                            <h6>Минимальная цена</h6>
+                                                                            <span>1500 руб.</span>
 
-                                                                        <h6>Самый быстрый рейс:</h6>
-                                                                        <span>12 часов</span>
+                                                                            <h6>Самый быстрый рейс:</h6>
+                                                                            <span>12 часов</span>
 
-                                                                    </a>
-                                                                </div>
+                                                                        </a>
+                                                                    </div>
 
-                                                                <div class="card-race card-race-hover-effect" style="background: #6D3EFF;transform: translateX(-200px);">
-                                                                    <a href="" class="text-white">
-                                                                        <i class="icofont-airplane-alt avia white"></i>
+                                                                    <div class="card-race card-race-hover-effect" style="background: #6D3EFF;transform: translateX(-200px);">
+                                                                        <a href="" class="text-white">
+                                                                            <i class="icofont-airplane-alt avia white"></i>
 
-                                                                        <h6>Минимальная цена</h6>
-                                                                        <span>1500 руб.</span>
+                                                                            <h6>Минимальная цена</h6>
+                                                                            <span>1500 руб.</span>
 
-                                                                        <h6>Самый быстрый рейс:</h6>
-                                                                        <span>12 часов</span>
-                                                                    </a>
-                                                                </div>
+                                                                            <h6>Самый быстрый рейс:</h6>
+                                                                            <span>12 часов</span>
+                                                                        </a>
+                                                                    </div>
 
-                                                                <div class="card-race card-race-hover-effect" style="background: #84C03B;transform: translateX(-400px);">
-                                                                    <a href="bus" class="text-white">
-                                                                        <i class="icofont-bus-alt-1 bus"></i>
+                                                                    <div class="card-race card-race-hover-effect" style="background: #84C03B;transform: translateX(-400px);">
+                                                                        <a href="bus" class="text-white">
+                                                                            <i class="icofont-bus-alt-1 bus"></i>
 
-                                                                        <h6>Минимальная цена</h6>
-                                                                        <span>1500 руб.</span>
+                                                                            <h6>Минимальная цена</h6>
+                                                                            <span>1500 руб.</span>
 
-                                                                        <h6>Самый быстрый рейс:</h6>
-                                                                        <span>12 часов</span>
+                                                                            <h6>Самый быстрый рейс:</h6>
+                                                                            <span>12 часов</span>
 
-                                                                    </a>
-                                                                </div>
+                                                                        </a>
+                                                                    </div>
 
-                                                                <div class="card-race" style="background: #ffa500;transform: translateX(-600px);">
-                                                                    <a href="">
-                                                                        <i class="icofont-car-alt-1 car white"></i>
+                                                                    <div class="card-race" style="background: #ffa500;transform: translateX(-600px);">
+                                                                        <a href="">
+                                                                            <i class="icofont-car-alt-1 car white"></i>
 
-                                                                        <h6>Минимальная цена</h6>
-                                                                        <span>1500 руб.</span>
+                                                                            <h6>Минимальная цена</h6>
+                                                                            <span>1500 руб.</span>
 
-                                                                        <h6>Самый быстрый рейс:</h6>
-                                                                        <span>12 часов</span>
+                                                                            <h6>Самый быстрый рейс:</h6>
+                                                                            <span>12 часов</span>
 
-                                                                        <div class="arrowmini">
-                                                                            <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
-                                                                            </svg>
-                                                                        </div>
-                                                                    </a>
+                                                                            <div class="arrowmini">
+                                                                                <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
+                                                                                </svg>
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
 
 
 
-                                                    <div class="flight-time d-flex justify-content-between ">
-                                                        <div class="left">
-                                                            <span class="d-block">10:55</span>
-                                                            <span class="d-block">HKG T2</span>
-                                                        </div><!-- /.left -->
-                                                        <div class="middle">
-                                                            <img src="{{asset('images/all-img/time-shape-line.png')}}" alt="time shape" draggable="false">
-                                                        </div><!-- /.middle -->
-                                                        <div class="right">
-                                                            <span class="d-block">15.00</span>
-                                                            <span class="d-block">SIN T2</span>
-                                                        </div><!-- /.rght -->
-                                                    </div><!-- /.flight-time -->
-                                                    <div class="flight-detils">
-                                                        <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time --> 4h 5m</span>
-                                                        <span class="d-block">
+                                                        <div class="flight-time d-flex justify-content-between ">
+                                                            <div class="left">
+                                                                <span class="d-block">{{ $ticket['depart_time'] }}</span>
+                                                                <span class="d-block">{{ $ticket['route_depart_station '] }}</span>
+                                                            </div><!-- /.left -->
+                                                            <div class="middle">
+                                                                <img src="{{asset('images/all-img/time-shape-line.png')}}" alt="time shape" draggable="false">
+                                                            </div><!-- /.middle -->
+                                                            <div class="right">
+                                                                <span class="d-block">{{ $ticket['arrival_time'] }}</span>
+                                                                <span class="d-block">{{ $ticket['route_arrival_station '] }}</span>
+                                                            </div><!-- /.rght -->
+                                                        </div><!-- /.flight-time -->
+                                                        <div class="flight-detils">
+                                                            <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time --> 4h 5m</span>
+                                                            <span class="d-block">
                                                             <a href="#collapseExample" class="flt-d-clic btn-lg  pill rt-gradient text-uppercase" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
-                                                    </div><!-- /.flight-detils -->
-                                                    <div class="trip">
-                                                        <span class="d-blok">$610</span>
-                                                        <span class="d-block">Roundtrip</span>
-                                                    </div><!-- /.trip -->
-                                                    <div class="book-now">
-                                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
-                                                    </div><!-- /.book-now -->
-                                                </div><!-- /.top-content -->
+                                                        </div><!-- /.flight-detils -->
+                                                        <div class="trip">
+                                                            <span class="d-blok">$610</span>
+                                                            <span class="d-block">Roundtrip</span>
+                                                        </div><!-- /.trip -->
+                                                        <div class="book-now">
+                                                            <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                                        </div><!-- /.book-now -->
+                                                    </div><!-- /.top-content -->
 
 
 
 
 
-                                                <div class="collapse bottom-content card-results" id="collapseExample">
-                                                    <div class="container">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <h3 class="mb-0">Просмотр составного рейса Москва - Витязево</h3>
-                                                                <span class="text-muted">Сборный рейс: Москва - Витязево</span>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mt-5">
-                                                            <div class="col-lg-6 col-md-12">
-                                                                <div class="row">
-                                                                    <div class="col-2">
-                                                                        <h6 class="mb-0">Отбытие</h6>
-                                                                        <h2 class="mb-0">10:55</h2>
-                                                                        <span class="text-muted">HGK T2</span>
-                                                                    </div>
-                                                                    <div class="col-2 d-flex align-items-center ml-4">
-                                                                        <img src="/images/info-arrow.svg" alt="">
-                                                                    </div>
-                                                                    <div class="col-2">
-                                                                        <h6 class="mb-0">Прибытие</h6>
-                                                                        <h2 class="mb-0">15:00</h2>
-                                                                        <span class="text-muted">SIN T2</span>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div style="width: 354px;height: 5px;background: #6E3FFF;border-radius: 12px;opacity: .2;margin-top: 30px;margin-bottom: 30px;"></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <h5 class="mb-0" style="text-transform: none;">Время в пути</h5>
-                                                                        <h3 style="color: #6E3FFF;font-weight: bolder;">5 часов 32 минуты</h3>
-                                                                    </div>
-                                                                    <div class="col-12 mt-3">
-                                                                        <h5 class="mb-0" style="text-transform: none;">Стоимость</h5>
-                                                                        <h3 class="mb-0" style="color: #6E3FFF;font-weight: bolder;">5 860 руб.</h3>
-                                                                    </div>
-                                                                    <div class="col-12 mt-3">
-                                                                        <h5 class="mb-0" style="text-transform: none;">Количество пересадок</h5>
-                                                                        <h3 class="mb-0" style="color: #6E3FFF;font-weight: bolder;">3</h3>
-                                                                    </div>
-                                                                    <div class="col-12" style="margin-top: 30px;">
-                                                                        <button class="by-btn">Перейти к оформлению</button>
-                                                                    </div>
+                                                    <div class="collapse bottom-content card-results" id="collapseExample">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <h3 class="mb-0">Просмотр составного рейса Москва - Витязево</h3>
+                                                                    <span class="text-muted">Сборный рейс: Москва - Витязево</span>
                                                                 </div>
                                                             </div>
+                                                            <div class="row mt-5">
+                                                                <div class="col-lg-6 col-md-12">
+                                                                    <div class="row">
+                                                                        <div class="col-2">
+                                                                            <h6 class="mb-0">Отбытие</h6>
+                                                                            <h2 class="mb-0">10:55</h2>
+                                                                            <span class="text-muted">HGK T2</span>
+                                                                        </div>
+                                                                        <div class="col-2 d-flex align-items-center ml-4">
+                                                                            <img src="/images/info-arrow.svg" alt="">
+                                                                        </div>
+                                                                        <div class="col-2">
+                                                                            <h6 class="mb-0">Прибытие</h6>
+                                                                            <h2 class="mb-0">15:00</h2>
+                                                                            <span class="text-muted">SIN T2</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <div style="width: 354px;height: 5px;background: #6E3FFF;border-radius: 12px;opacity: .2;margin-top: 30px;margin-bottom: 30px;"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-12">
+                                                                            <h5 class="mb-0" style="text-transform: none;">Время в пути</h5>
+                                                                            <h3 style="color: #6E3FFF;font-weight: bolder;">5 часов 32 минуты</h3>
+                                                                        </div>
+                                                                        <div class="col-12 mt-3">
+                                                                            <h5 class="mb-0" style="text-transform: none;">Стоимость</h5>
+                                                                            <h3 class="mb-0" style="color: #6E3FFF;font-weight: bolder;">5 860 руб.</h3>
+                                                                        </div>
+                                                                        <div class="col-12 mt-3">
+                                                                            <h5 class="mb-0" style="text-transform: none;">Количество пересадок</h5>
+                                                                            <h3 class="mb-0" style="color: #6E3FFF;font-weight: bolder;">3</h3>
+                                                                        </div>
+                                                                        <div class="col-12" style="margin-top: 30px;">
+                                                                            <button class="by-btn">Перейти к оформлению</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
 
 
-                                                            <div class="col-lg-6 col-md-12">
-                                                                <div class="d-flex flex-row flex-wrap justify-content-center">
-                                                                    <div class="col-12 d-flex">
+                                                                <div class="col-lg-6 col-md-12">
+                                                                    <div class="d-flex flex-row flex-wrap justify-content-center">
+                                                                        <div class="col-12 d-flex">
 
-                                                                        <div class="card-race card-race-hover-effect" style="background: #F92853;">
+                                                                            <div class="card-race card-race-hover-effect" style="background: #F92853;">
                                                                                 <a href="">
-                                                                                <i class="icofont-train-line train"></i>
+                                                                                    <i class="icofont-train-line train"></i>
 
-                                                                                <h6>Минимальная цена</h6>
-                                                                                <span>1500 руб.</span>
+                                                                                    <h6>Минимальная цена</h6>
+                                                                                    <span>1500 руб.</span>
 
-                                                                                <h6>Самый быстрый рейс:</h6>
-                                                                                <span>12 часов</span>
+                                                                                    <h6>Самый быстрый рейс:</h6>
+                                                                                    <span>12 часов</span>
 
-                                                                                <div class="arrow">
-                                                                                    <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                        <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
-                                                                                    </svg>
-                                                                                </div>
+                                                                                    <div class="arrow">
+                                                                                        <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                            <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
+                                                                                        </svg>
+                                                                                    </div>
                                                                                 </a>
                                                                             </div>
 
-                                                                        <div class="card-race card-race-hover-effect" style="background: #6D3EFF;transform: translateX(-200px);">
-                                                                            <a href="">
-                                                                                <i class="icofont-airplane-alt avia"></i>
-
-                                                                                <h6>Минимальная цена</h6>
-                                                                                <span>1500 руб.</span>
-
-                                                                                <h6>Самый быстрый рейс:</h6>
-                                                                                <span>12 часов</span>
-
-                                                                                <div class="arrow">
-                                                                                    <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                        <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
-                                                                                    </svg>
-                                                                                </div>
-                                                                            </a>
-                                                                        </div>
-
-                                                                        <div class="card-race card-race-hover-effect" style="background: #84C03B;transform: translateX(-400px);">
-                                                                            <a href="bus">
-                                                                                <i class="icofont-bus-alt-1 bus"></i>
-
-                                                                                <h6>Минимальная цена</h6>
-                                                                                <span>1500 руб.</span>
-
-                                                                                <h6>Самый быстрый рейс:</h6>
-                                                                                <span>12 часов</span>
-
-                                                                                <div class="arrow">
-                                                                                    <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                        <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
-                                                                                    </svg>
-                                                                                </div>
-                                                                            </a>
-                                                                        </div>
-
-                                                                        <div class="card-race" style="background: #ffa500;transform: translateX(-600px);">
+                                                                            <div class="card-race card-race-hover-effect" style="background: #6D3EFF;transform: translateX(-200px);">
                                                                                 <a href="">
-                                                                                <i class="icofont-car-alt-1 car"></i>
+                                                                                    <i class="icofont-airplane-alt avia"></i>
 
-                                                                                <h6>Минимальная цена</h6>
-                                                                                <span>1500 руб.</span>
+                                                                                    <h6>Минимальная цена</h6>
+                                                                                    <span>1500 руб.</span>
 
-                                                                                <h6>Самый быстрый рейс:</h6>
-                                                                                <span>12 часов</span>
+                                                                                    <h6>Самый быстрый рейс:</h6>
+                                                                                    <span>12 часов</span>
 
-                                                                                <div class="arrow">
-                                                                                    <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                                        <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
-                                                                                    </svg>
-                                                                                </div>
+                                                                                    <div class="arrow">
+                                                                                        <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                            <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </div>
+
+                                                                            <div class="card-race card-race-hover-effect" style="background: #84C03B;transform: translateX(-400px);">
+                                                                                <a href="bus">
+                                                                                    <i class="icofont-bus-alt-1 bus"></i>
+
+                                                                                    <h6>Минимальная цена</h6>
+                                                                                    <span>1500 руб.</span>
+
+                                                                                    <h6>Самый быстрый рейс:</h6>
+                                                                                    <span>12 часов</span>
+
+                                                                                    <div class="arrow">
+                                                                                        <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                            <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
+                                                                                        </svg>
+                                                                                    </div>
+                                                                                </a>
+                                                                            </div>
+
+                                                                            <div class="card-race" style="background: #ffa500;transform: translateX(-600px);">
+                                                                                <a href="">
+                                                                                    <i class="icofont-car-alt-1 car"></i>
+
+                                                                                    <h6>Минимальная цена</h6>
+                                                                                    <span>1500 руб.</span>
+
+                                                                                    <h6>Самый быстрый рейс:</h6>
+                                                                                    <span>12 часов</span>
+
+                                                                                    <div class="arrow">
+                                                                                        <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                                            <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
+                                                                                        </svg>
+                                                                                    </div>
                                                                                 </a>
                                                                             </div>
 
 
 
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div><!-- /.bottom content -->
-                                            </div><!-- /.flight-box -->
+                                                    </div><!-- /.bottom content -->
+                                                </div>
+                                            @endforeach
                                         </div><!-- /.col-lg-12 -->
 
                                     </div><!-- /.row -->
@@ -450,4 +452,20 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section>
+
+    <script>
+        let data = new Map([
+            ['depart', '{{  $_GET['fromtime'] }}'],
+            ['arrival', '{{  $_GET['fromtime'] }}'],
+        ]);
+
+        $.ajax({
+            type: "POST",
+            url: "http://lk.ecutravel.ru/api/guide/tours",
+            data: data,
+            message: function (msg) {
+                console.log(msg);
+            }
+        });
+    </script>
 @endsection
