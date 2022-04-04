@@ -196,6 +196,14 @@
                                         </div><!-- /.col-lg-12 -->
                                         <div class="col-lg-12 col-md-6">
                                             @foreach($tickets as $ticket)
+                                                @php
+                                                    $arrivalTime = explode(':', $ticket['arrival_time']);
+                                                    $departTime = explode(':', $ticket['depart_time']);
+
+                                                    $roadHours = $departTime[0] - $arrivalTime[0];
+                                                    $roadMinutes = $departTime[1] - $arrivalTime[1];
+                                                    #dd($ticket);
+                                                @endphp
                                                 <div class="flight-list-box rt-mb-30">
                                                     <div class="top-content d-flex flex-lg-row flex-column align-items-lg-center  justify-content-lg-between">
                                                         <div class="col-lg-5 col-md-12">
@@ -266,18 +274,21 @@
                                                         <div class="flight-time d-flex justify-content-between ">
                                                             <div class="left">
                                                                 <span class="d-block">{{ $ticket['depart_time'] }}</span>
-                                                                <span class="d-block">{{ $ticket['route_depart_station '] }}</span>
+                                                                <span class="d-block">{{ $ticket['route_depart_station'] }}</span>
                                                             </div><!-- /.left -->
                                                             <div class="middle">
                                                                 <img src="{{asset('images/all-img/time-shape-line.png')}}" alt="time shape" draggable="false">
                                                             </div><!-- /.middle -->
                                                             <div class="right">
                                                                 <span class="d-block">{{ $ticket['arrival_time'] }}</span>
-                                                                <span class="d-block">{{ $ticket['route_arrival_station '] }}</span>
+                                                                <span class="d-block">{{ $ticket['route_arrival_station'] }}</span>
                                                             </div><!-- /.rght -->
                                                         </div><!-- /.flight-time -->
                                                         <div class="flight-detils">
-                                                            <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time --> 4h 5m</span>
+                                                            <span class="d-block">
+                                                                <i class="icofont-clock-time"></i>
+                                                                {{ $roadHours }}ч {{ $roadMinutes }}м
+                                                            </span>
                                                             <span class="d-block">
                                                             <a href="#collapseExample" class="flt-d-clic btn-lg  pill rt-gradient text-uppercase" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                         </div><!-- /.flight-detils -->
@@ -298,8 +309,10 @@
                                                         <div class="container">
                                                             <div class="row">
                                                                 <div class="col-12">
-                                                                    <h3 class="mb-0">Просмотр составного рейса Москва - Витязево</h3>
-                                                                    <span class="text-muted">Сборный рейс: Москва - Витязево</span>
+                                                                    <h3 class="mb-0">
+                                                                        Просмотр составного рейса {{ $ticket['route_departure_address'] }} - {{ $ticket['route_arrival_address'] }}
+                                                                    </h3>
+{{--                                                                    <span class="text-muted">Сборный рейс: Москва - Витязево</span>--}}
                                                                 </div>
                                                             </div>
                                                             <div class="row mt-5">

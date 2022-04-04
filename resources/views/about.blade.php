@@ -84,24 +84,23 @@ white-menu
             <div class="col-lg-6 mb-0 mb-md-4">
                 <div class="rt-icon rt-hw-45 rt-circle icon-glow-1 icon-gradinet-1 f-size-20">
                     03
-                </div><!-- /.rt-icon -->
+                </div>
                 <img src="/images/all-img/work-img-3.png" alt="work image" draggable="false">
-            </div><!-- /.col-lg-6 -->
+            </div>
             <div class="col-lg-5 offset-lg-1">
                 <div class="rt-icon rt-hw-65 f-size-45  rt-dotted-primary text-gradinet-primary rt-mb-30">
                     <i class="icofont-runner-alt-1"></i>
-                </div><!-- /.rt-icon -->
+                </div>
                 <h4 class="f-size-24 rt-semiblod rt-mb-20">В добрый путь! </h4>
                 <div class="text-424">
                     <p class="f-size-14 ">Наша интелектуальная система подберет стыковочные рейсы настолько удобно, что
                     Вам не надо будет беспокоиться о том, где и сколько времени неообходимо, чтобы переждать время между пересадками.
                     Вы получите максимально бесшовный составной маршрут, и соответственно сэкономите и деньги и время
                     </p>
-                </div><!-- /.text-424 -->
-
-            </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-    </div><!-- ./ copntainer -->
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <div class="bg-gradient-primary call-toaction-fullwidth rt-pt-100 rt-pb-100">

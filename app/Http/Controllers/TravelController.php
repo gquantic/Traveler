@@ -56,6 +56,8 @@ class TravelController extends Controller
         $response = json_decode($tickets, true);
         $tickets = $response['data'];
 
+//        dd($tickets);
+
         /**
             0 => array:17 [▼
                 "id" => 3
