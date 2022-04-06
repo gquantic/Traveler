@@ -269,8 +269,6 @@
                                                             </div>
                                                         </div>
 
-
-
                                                         <div class="flight-time d-flex justify-content-between ">
                                                             <div class="left">
                                                                 <span class="d-block">{{ $ticket['depart_time'] }}</span>
@@ -285,10 +283,10 @@
                                                             </div><!-- /.rght -->
                                                         </div><!-- /.flight-time -->
                                                         <div class="flight-detils">
-                                                            <span class="d-block">
+                                                            <h6 class="d-block">
                                                                 <i class="icofont-clock-time"></i>
-                                                                {{ $roadHours }}ч {{ $roadMinutes }}м
-                                                            </span>
+                                                                {{ $roadHours }} ч {{ $roadMinutes }} м
+                                                            </h6>
                                                             <span class="d-block">
                                                             <a href="#collapseExample" class="flt-d-clic btn-lg  pill rt-gradient text-uppercase" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Подробнее о рейсе <i class="icofont-simple-down"></i></a></span>
                                                         </div><!-- /.flight-detils -->
@@ -320,7 +318,7 @@
                                                                     <div class="row">
                                                                         <div class="col-2">
                                                                             <h6 class="mb-0">Отбытие</h6>
-                                                                            <h2 class="mb-0">10:55</h2>
+                                                                            <h3 class="mb-0">{{ $ticket['depart_time'] }}</h3>
                                                                             <span class="text-muted">HGK T2</span>
                                                                         </div>
                                                                         <div class="col-2 d-flex align-items-center ml-4">
@@ -328,7 +326,7 @@
                                                                         </div>
                                                                         <div class="col-2">
                                                                             <h6 class="mb-0">Прибытие</h6>
-                                                                            <h2 class="mb-0">15:00</h2>
+                                                                            <h3 class="mb-0">{{ $ticket['arrival_time'] }}</h3>
                                                                             <span class="text-muted">SIN T2</span>
                                                                         </div>
                                                                     </div>
