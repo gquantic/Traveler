@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+
     <div class="rt-breadcump rt-breadcump-height">
         <div class="rt-page-bg rtbgprefix-cover" style="background-image: url(images/backgrounds/bredcump.png)">
         </div><!-- /.rt-page-bg -->
@@ -24,6 +25,18 @@
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div><!-- /.rt-bredcump -->
+
+    @php
+        $arrivalTime = explode(':', $ticket['arrival_time']);
+        $departTime = explode(':', $ticket['depart_time']);
+
+        $duration = explode(':', $ticket['duration']);
+        $durationDisplay = "{$duration[0]} часов";
+
+
+        if ($duration[1])
+            $durationDisplay = $durationDisplay . " {$duration[1]} минуты";
+    @endphp
 
     <section class="content-area">
         <div class="container">
@@ -46,20 +59,19 @@
                     <div class="flt-dtls-box rt-mb-30">
                         <div class="upper-top-content d-md-flex flex-md-row justify-content-md-between align-items-center">
                             <div class="left">
-                                <span>Москва</span> <span><img src="images/all-img/shp-ln-1.png" alt="line image" draggable="false"></span> <span>Витязево</span>
-                                <p>Ноябрь 12, 2018 | 1 взрослый </p>
+                                <span>{{ $ticket['route_departure_address'] }}</span> <span><img src="{{asset('images/all-img/shp-ln-1.png')}}" alt="line image" draggable="false"></span> <span>{{ $ticket['route_arrival_address'] }}</span>
+                                <p>{{$ticket['departure_date']}} </p>
                             </div><!-- /.left -->
                             <div class="right">
-                                <a href="#" class="rt-btn rt-gradient3 rt-Bshadow-3  pill text-uppercase rt-sm2">Update</a>
+                                <a href="" class="rt-btn rt-gradient3 rt-Bshadow-3  pill text-uppercase rt-sm2">Обновить</a>
                             </div><!-- /.right -->
                         </div><!-- /.upper-top-content -->
                         <div class="flight-list-box">
                             <div class="top-content d-flex flex-lg-row flex-column align-items-lg-center justify-content-left  justify-content-lg-between">
                                 <div class="col-5 d-flex">
-
-                                    <div class="card-racecm card-race-hover-effect" style="background: #F92853;">
+                                    <div class="card-racecm card-race-hover-effect" style="background: #ffa500;">
                                         <a href="" class="text-white">
-                                            <i class="icofont-train-line train"></i>
+                                            <i class="icofont-car-alt-1 car white"></i>
 
                                             <h6>Минимальная цена</h6>
                                             <span>1500 руб.</span>
@@ -69,48 +81,59 @@
 
                                         </a>
                                     </div>
+                                    @switch($ticket['vehicle_type'])
+                                        @case('РЖД')
+                                        <div class="card-racecm card-race-hover-effect" style="background: #F92853;">
+                                            <a href="" class="text-white">
+                                                <i class="icofont-train-line train"></i>
 
-                                    <div class="card-racecm card-race-hover-effect" style="background: #6D3EFF;transform: translateX(-200px);">
-                                        <a href="" class="text-white">
-                                            <i class="icofont-airplane-alt avia white"></i>
+                                                <h6>Минимальная цена</h6>
+                                                <span>{{ $ticket['price'] }}</span>
 
-                                            <h6>Минимальная цена</h6>
-                                            <span>1500 руб.</span>
+                                                <h6>Самый быстрый рейс:</h6>
+                                                <span>{{ $durationDisplay }}</span>
 
-                                            <h6>Самый быстрый рейс:</h6>
-                                            <span>12 часов</span>
-                                        </a>
-                                    </div>
+                                            </a>
+                                        </div>
+                                    @break
+                                    @case('Авиа')
+                                        <div class="card-racecm card-race-hover-effect" style="background: #6D3EFF;transform: translateX(-200px);">
+                                            <a href="" class="text-white">
+                                                <i class="icofont-airplane-alt avia white"></i>
 
-                                    <div class="card-racecm card-race-hover-effect" style="background: #84C03B;transform: translateX(-400px);">
-                                        <a href="bus" class="text-white">
-                                            <i class="icofont-bus-alt-1 bus"></i>
+                                                <h6>Минимальная цена</h6>
+                                                <span>{{ $ticket['price'] }}</span>
 
-                                            <h6>Минимальная цена</h6>
-                                            <span>1500 руб.</span>
+                                                <h6>Самый быстрый рейс:</h6>
+                                                <span>{{ $durationDisplay }}</span>
+                                            </a>
+                                        </div>
+                                    @endswitch
+                                        <div class="card-racecm card-race-hover-effect" style="background: #ffa500;transform: translateX(-400px)">
+                                            <a href="" class="text-white">
+                                                <i class="icofont-car-alt-1 car white"></i>
 
-                                            <h6>Самый быстрый рейс:</h6>
-                                            <span>12 часов</span>
+                                                <h6>Минимальная цена</h6>
+                                                <span>1500 руб.</span>
 
-                                            <div>
-                                                <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
+                                                <h6>Самый быстрый рейс:</h6>
+                                                <span>12 часов</span>
+
+                                            </a>
+                                        </div>
+
                                 </div><!-- /.pricing -->
                                 <div class="flight-time d-flex justify-content-between align-items-center">
                                     <div class="left">
-                                        <span class="d-block">10:55</span>
-                                        <span class="d-block">HKG T2</span>
+                                        <span class="d-block">{{ $ticket['depart_time'] }}</span>
+                                        <span class="d-block">{{ $ticket['route_depart_station'] }}</span>
                                     </div><!-- /.left -->
                                     <div class="middle">
-                                        <img src="images/all-img/time-shape-line.png" alt="time shape" draggable="false">
+                                        <img src="{{asset('images/all-img/time-shape-line.png')}}" alt="time shape" draggable="false">
                                     </div><!-- /.middle -->
                                     <div class="right">
-                                        <span class="d-block">15.00</span>
-                                        <span class="d-block">SIN T2</span>
+                                        <span class="d-block">{{ $ticket['arrival_time'] }}</span>
+                                        <span class="d-block">{{ $ticket['route_arrival_station'] }}</span>
                                     </div><!-- /.rght -->
                                 </div><!-- /.flight-time -->
                                 <div class="flight-detils">
@@ -121,9 +144,9 @@
 
 
                                 <div class="trip book-now text-center">
-                                    <span class="d-blok">$610</span>
-                                    <span class="d-block">Roundtrip</span>
-                                    <a href="#" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
+                                    <span class="d-blok">{{ $ticket['price'] }}</span>
+{{--                                    <span class="d-block">Roundtrip</span>--}}
+{{--                                    <a href="#" class="rt-btn  pill rt-gradient text-uppercase">Book</a>--}}
                                 </div><!-- /.trip -->
 
                             </div><!-- /.top-content -->
@@ -131,7 +154,7 @@
                                 <div class="container more-info-card">
                                     <div class="row">
                                         <div class="col-12">
-                                            <h3 class="mb-0">Просмотр составного рейса Москва - Витязево</h3>
+                                            <h3 class="mb-0">  Просмотр составного рейса {{ $ticket['route_departure_address'] }} - {{ $ticket['route_arrival_address'] }}</h3>
                                             <span class="text-muted">Сборный рейс: Москва - Витязево</span>
                                         </div>
                                     </div>
@@ -140,16 +163,16 @@
                                             <div class="row">
                                                 <div class="col-2">
                                                     <h6 class="mb-0">Отбытие</h6>
-                                                    <h3 class="mb-0">10:55</h3>
-                                                    <span class="text-muted">HGK T2</span>
+                                                    <h3 class="mb-0">{{ $ticket['depart_time'] }}</h3>
+                                                    <span class="text-muted">{{ $ticket['route_depart_station'] }}</span>
                                                 </div>
                                                 <div class="col-2 d-flex align-items-center ml-4">
                                                     <img src="/images/info-arrow.svg" alt="">
                                                 </div>
                                                 <div class="col-2">
                                                     <h6 class="mb-0">Прибытие</h6>
-                                                    <h3 class="mb-0">15:00</h3>
-                                                    <span class="text-muted">SIN T2</span>
+                                                    <h3 class="mb-0">{{ $ticket['arrival_time'] }}</h3>
+                                                    <span class="text-muted">{{ $ticket['route_arrival_station'] }}</span>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -160,17 +183,32 @@
                                             <div class="row">
                                                 <div class="col-12">
                                                     <h5 class="mt-1" style="text-transform: none;">Время в пути</h5>
-                                                    <h3 style="color: #6E3FFF;font-weight: bolder;">5 часов 32 минуты</h3>
+                                                    <h3 style="color: #6E3FFF;font-weight: bolder;">{{ $durationDisplay }}</h3>
                                                     <h5 class="mt-1" style="text-transform: none;">Стоимость</h5>
-                                                    <h3 class="mt-1" style="color: #6E3FFF;font-weight: bolder;">5 860 руб.</h3>
+                                                    <h3 class="mt-1" style="color: #6E3FFF;font-weight: bolder;">{{ $ticket['price'] }} руб.</h3>
                                                     <h5 class="mt-1" style="text-transform: none;">Количество пересадок</h5>
-                                                    <h3 class="mt-1" style="color: #6E3FFF;font-weight: bolder;">3</h3>
+                                                    <h3 class="mt-1" style="color: #6E3FFF;font-weight: bolder;">{{ $ticket['condition_tours'] }}</h3>
                                                     <button class="by-btn">Перейти к оформлению</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-7 col-md-12">
                                             <div class="row row-cols-1 row-cols-md-2">
+                                                <div class="col-lg-6">
+                                                    <div class="card-racecm text-white" style="background: #ffa500;">
+                                                        <a href="">
+                                                            <i class="icofont-car-alt-1 car"></i>
+
+                                                            <h6>Минимальная цена</h6>
+                                                            <h6 class="info">1500 руб.</h6>
+
+                                                            <h6>Самый быстрый рейс:</h6>
+                                                            <h6 class="info">12 часов</h6>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                @switch($ticket['vehicle_type'])
+                                                    @case('РЖД')
                                                 <div class="col-lg-6">
                                                     <div class="card-racecm text-white" style="background: #F92853;">
                                                         <a href="">
@@ -184,7 +222,8 @@
                                                         </a>
                                                     </div>
                                                 </div>
-
+                                                @break
+                                                @case('Авиа')
                                                 <div class="col-lg-6">
                                                     <div class="card-racecm text-white" style="background: #6D3EFF;">
                                                         <a href="">
@@ -197,20 +236,8 @@
                                                             <h6 class="info">12 часов</h6>
                                                         </a>
                                                     </div>
-
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <div class="card-racecm text-white" style="background: #84C03B;">
-                                                        <a href="bus">
-                                                            <i class="icofont-bus-alt-1 bus"></i>
-
-                                                            <h6>Минимальная цена</h6>
-                                                            <h6 class="info">1500 руб.</h6>
-
-                                                            <h6>Самый быстрый рейс:</h6>
-                                                            <h6 class="info">12 часов</h6>
-                                                        </a>
-                                                    </div>
+                                                    @break
+                                                    @endswitch
                                                 </div>
                                                 <div class="col-lg-6">
                                                     <div class="card-racecm text-white" style="background: #ffa500;">
@@ -233,105 +260,105 @@
                         </div>
                     </div>
 
-                    <div class="flt-dtls-box rt-mb-30">
-                        <div class="upper-top-content d-md-flex flex-md-row justify-content-md-between align-items-center">
-                            <div class="left">
-                                <span>Москва (Домодедово)</span> <span><img src="images/all-img/shp-ln-1.png" alt="line image" draggable="false"></span> <span>Краснодар (Пашковский)</span>
-                                <p>Ноябрь 12, 2018 | 1 взрослый </p>
-                            </div><!-- /.left -->
-                            <div class="right">
-                                <a href="#" class="rt-btn rt-gradient3 rt-Bshadow-3  pill text-uppercase rt-sm2">Update</a>
-                            </div><!-- /.right -->
-                        </div><!-- /.upper-top-content -->
-                        <div class="flight-list-box rt-mb-30">
-                            <div class="col-lg-12 col-md-6">
-                                <div class="top-content d-flex flex-lg-row flex-column align-items-lg-center justify-content-left  justify-content-lg-between">
-                                    <div class="flight-logo">
-                                        <img src="images/all-img/flt-logo-1.png" alt="flt logo" draggable="false">
-                                    </div><!-- /.flight-logo -->
-                                    <div class="pricing">
-                                        <h5>Аэрофлот</h5>
-                                        <p>TR978 | Airbus A320-212</p>
-                                    </div><!-- /.pricing -->
-                                    <div class="flight-time d-flex justify-content-between align-items-lg-center">
-                                        <div class="left">
-                                            <span class="d-block">10:55</span>
-                                            <span class="d-block">HKG T2</span>
-                                        </div><!-- /.left -->
-                                        <div class="middle">
-                                            <img src="images/all-img/time-shape-line.png" alt="time shape" draggable="false">
-                                        </div><!-- /.middle -->
-                                        <div class="right">
-                                            <span class="d-block">15.00</span>
-                                            <span class="d-block">SIN T2</span>
-                                        </div><!-- /.rght -->
-                                    </div><!-- /.flight-time -->
-                                    <div class="flight-detils">
-                                        <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>
-                                        <span class="d-block"><a href="#collapseExample2" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Flight details <i class="icofont-simple-down"></i></a></span>
-                                    </div><!-- /.flight-detils -->
-                                    <div class="trip">
-                                        <span class="d-blok">$610</span>
-                                        <span class="d-block">Roundtrip</span>
-                                    </div><!-- /.trip -->
-                                    <div class="book-now">
-                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
-                                    </div><!-- /.book-now -->
-                                </div><!-- /.top-content -->
-                                <div class="collapse bottom-content" id="collapseExample2">
-                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>
-                                    <ul class="flight-timeline">
+{{--                    <div class="flt-dtls-box rt-mb-30">--}}
+{{--                        <div class="upper-top-content d-md-flex flex-md-row justify-content-md-between align-items-center">--}}
+{{--                            <div class="left">--}}
+{{--                                <span>Москва (Домодедово)</span> <span><img src="images/all-img/shp-ln-1.png" alt="line image" draggable="false"></span> <span>Краснодар (Пашковский)</span>--}}
+{{--                                <p>Ноябрь 12, 2018 | 1 взрослый </p>--}}
+{{--                            </div><!-- /.left -->--}}
+{{--                            <div class="right">--}}
+{{--                                <a href="#" class="rt-btn rt-gradient3 rt-Bshadow-3  pill text-uppercase rt-sm2">Update</a>--}}
+{{--                            </div><!-- /.right -->--}}
+{{--                        </div><!-- /.upper-top-content -->--}}
+{{--                        <div class="flight-list-box rt-mb-30">--}}
+{{--                            <div class="col-lg-12 col-md-6">--}}
+{{--                                <div class="top-content d-flex flex-lg-row flex-column align-items-lg-center justify-content-left  justify-content-lg-between">--}}
+{{--                                    <div class="flight-logo">--}}
+{{--                                        <img src="images/all-img/flt-logo-1.png" alt="flt logo" draggable="false">--}}
+{{--                                    </div><!-- /.flight-logo -->--}}
+{{--                                    <div class="pricing">--}}
+{{--                                        <h5>Аэрофлот</h5>--}}
+{{--                                        <p>TR978 | Airbus A320-212</p>--}}
+{{--                                    </div><!-- /.pricing -->--}}
+{{--                                    <div class="flight-time d-flex justify-content-between align-items-lg-center">--}}
+{{--                                        <div class="left">--}}
+{{--                                            <span class="d-block">10:55</span>--}}
+{{--                                            <span class="d-block">HKG T2</span>--}}
+{{--                                        </div><!-- /.left -->--}}
+{{--                                        <div class="middle">--}}
+{{--                                            <img src="images/all-img/time-shape-line.png" alt="time shape" draggable="false">--}}
+{{--                                        </div><!-- /.middle -->--}}
+{{--                                        <div class="right">--}}
+{{--                                            <span class="d-block">15.00</span>--}}
+{{--                                            <span class="d-block">SIN T2</span>--}}
+{{--                                        </div><!-- /.rght -->--}}
+{{--                                    </div><!-- /.flight-time -->--}}
+{{--                                    <div class="flight-detils">--}}
+{{--                                        <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h5m</span>--}}
+{{--                                        <span class="d-block"><a href="#collapseExample2" class="flt-d-clic" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">Flight details <i class="icofont-simple-down"></i></a></span>--}}
+{{--                                    </div><!-- /.flight-detils -->--}}
+{{--                                    <div class="trip">--}}
+{{--                                        <span class="d-blok">$610</span>--}}
+{{--                                        <span class="d-block">Roundtrip</span>--}}
+{{--                                    </div><!-- /.trip -->--}}
+{{--                                    <div class="book-now">--}}
+{{--                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>--}}
+{{--                                    </div><!-- /.book-now -->--}}
+{{--                                </div><!-- /.top-content -->--}}
+{{--                                <div class="collapse bottom-content" id="collapseExample2">--}}
+{{--                                    <p><span>Scoot - TR979 | Airbus A320 | Economy</span> <span><i class="icofont-clock-time"></i>4h5m</span></p>--}}
+{{--                                    <ul class="flight-timeline">--}}
 
-                                        <li>
-                                            <span>Nov 12 10:55</span>
+{{--                                        <li>--}}
+{{--                                            <span>Nov 12 10:55</span>--}}
 
-                                        </li>
-                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>
-                                        <li>
-                                            <span>Nov 12 15:00</span>
+{{--                                        </li>--}}
+{{--                                        <li><span>HKG - Hong Kong Hong Kong International Airport T2</span></li>--}}
+{{--                                        <li>--}}
+{{--                                            <span>Nov 12 15:00</span>--}}
 
-                                        </li>
-                                        <li><span>SIN - Singapore Changi Airport T2</span></li>
-                                    </ul>
-                                </div><!-- /.bottom content -->
-                            </div><!-- /.flight-box -->
-                        </div>
-                    </div>
+{{--                                        </li>--}}
+{{--                                        <li><span>SIN - Singapore Changi Airport T2</span></li>--}}
+{{--                                    </ul>--}}
+{{--                                </div><!-- /.bottom content -->--}}
+{{--                            </div><!-- /.flight-box -->--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
 
-                    <div class="flt-dtls-box rt-mb-30">
-                        <div class="upper-top-content d-md-flex flex-md-row justify-content-md-between align-items-center">
-                            <div class="left">
-                                <span>Краснодар</span> <span><img src="images/all-img/shp-ln-1.png" alt="line image" draggable="false"></span> <span>Анапа (Автобус)</span>
-                            </div><!-- /.left -->
-                        </div><!-- /.upper-top-content -->
-                        <div class="flight-list-box rt-mb-30">
-                            <div class="col-lg-12 col-md-6">
-                                <div class="top-content d-flex flex-lg-row flex-column align-items-lg-center justify-content-left  justify-content-lg-between">
-                                    <div class="pricing">
-                                        <h2 class="text-primary">G102</h2>
-                                    </div><!-- /.pricing -->
-                                    <div class="flight-time d-flex justify-content-between align-items-lg-center">
-                                        <div class="left">
-                                            <span class="d-block"> <i class="icofont-info-circle"></i> 06:26</span>
-                                        </div><!-- /.left -->
-                                    </div><!-- /.flight-time -->
-                                    <div class="flight-detils">
-                                        <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h 5m</span>
-                                    </div>
-                                    <div class="flight-detils">
-                                        <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->2an Class</span>
-                                    </div><!-- /.flight-detils -->
-                                    <div class="trip">
-                                        <span class="d-blok">$25.33</span>
-                                    </div><!-- /.trip -->
-                                    <div class="book-now">
-                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>
-                                    </div><!-- /.book-now -->
-                                </div><!-- /.top-content -->
-                            </div><!-- /.flight-box -->
-                        </div>
-                    </div>
+{{--                    <div class="flt-dtls-box rt-mb-30">--}}
+{{--                        <div class="upper-top-content d-md-flex flex-md-row justify-content-md-between align-items-center">--}}
+{{--                            <div class="left">--}}
+{{--                                <span>Краснодар</span> <span><img src="images/all-img/shp-ln-1.png" alt="line image" draggable="false"></span> <span>Анапа (Автобус)</span>--}}
+{{--                            </div><!-- /.left -->--}}
+{{--                        </div><!-- /.upper-top-content -->--}}
+{{--                        <div class="flight-list-box rt-mb-30">--}}
+{{--                            <div class="col-lg-12 col-md-6">--}}
+{{--                                <div class="top-content d-flex flex-lg-row flex-column align-items-lg-center justify-content-left  justify-content-lg-between">--}}
+{{--                                    <div class="pricing">--}}
+{{--                                        <h2 class="text-primary">G102</h2>--}}
+{{--                                    </div><!-- /.pricing -->--}}
+{{--                                    <div class="flight-time d-flex justify-content-between align-items-lg-center">--}}
+{{--                                        <div class="left">--}}
+{{--                                            <span class="d-block"> <i class="icofont-info-circle"></i> 06:26</span>--}}
+{{--                                        </div><!-- /.left -->--}}
+{{--                                    </div><!-- /.flight-time -->--}}
+{{--                                    <div class="flight-detils">--}}
+{{--                                        <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->4h 5m</span>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="flight-detils">--}}
+{{--                                        <span class="d-block"><i class="icofont-clock-time"></i><!-- /.time -->2an Class</span>--}}
+{{--                                    </div><!-- /.flight-detils -->--}}
+{{--                                    <div class="trip">--}}
+{{--                                        <span class="d-blok">$25.33</span>--}}
+{{--                                    </div><!-- /.trip -->--}}
+{{--                                    <div class="book-now">--}}
+{{--                                        <a href="flight-details.html" class="rt-btn  pill rt-gradient text-uppercase">Book</a>--}}
+{{--                                    </div><!-- /.book-now -->--}}
+{{--                                </div><!-- /.top-content -->--}}
+{{--                            </div><!-- /.flight-box -->--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
 
 
                     <div class="flt-dtls-box rt-mb-30">
@@ -622,7 +649,6 @@
                                     <li><a href="#"><img src="assets/images/brands/card-3.png" alt="cardimage" draggable="false"></a></li>
                                     <li><a href="#"><img src="assets/images/brands/card-4.png" alt="cardimage" draggable="false"></a></li>
                                     <li><a href="#"><img src="assets/images/brands/card-5.png" alt="cardimage" draggable="false"></a></li>
-
                                 </ul>
                             </div>
                         </div><!-- /.plain-box -->

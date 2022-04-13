@@ -41,11 +41,6 @@ class TravelController extends Controller
          * ПОЛУЧАЕМ ДАННЫЕ
          */
 
-        $get = array(
-            'depart'  => 'Москва',
-            'destination' => 'Краснодар'
-        );
-
         $ch = curl_init('http://ecupay.ru/api/tours');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -59,24 +54,28 @@ class TravelController extends Controller
 //        dd($tickets);
 
         /**
-            0 => array:17 [▼
-                "id" => 3
-                "route_number " => "5262"
-                "route_depart_station " => "АС Анапа"
-                "route_arrival_station " => "Остановка "Магнит""
-                "route_departure_address " => "Красноармейская ул., 11, Анапа, Краснодарский край, 353440"
-                "route_arrival_address " => "с. Витязево, ул. Колхозная, 34"
-                "vehicle " => 2
-                "vehicle_type " => null
-                "vehicle_model_vehicle\t " => "НЕОПЛАН"
-                "vehicle_gus_number_vehicle\t " => "О 562 РН 123"
-                "driver\t" => "Федоров Петр"
-                "driver_2 " => null
-                "depart_time" => "13:00:00"
-                "arrival_time" => "15:15:00"
-                "departure_date" => "2022-03-17 00:00:00"
-                "arrival_date" => "2022-03-17 00:00:00"
+            array:21 [▼
+                "id" => 1
+                "route_number" => "Рейс S7?2141"
+                "route_depart_station" => "Домодедово, DME"
+                "route_arrival_station" => "Гумрак, VOG"
+                "route_departure_address" => "Волгоград"
+                "route_arrival_address" => "Москва"
+                "vehicle" => 1
+                "vehicle_type" => "Авиа"
+                "vehicle_model_vehicle" => "Airbus A320"
+                "vehicle_gus_number_vehicle" => "1231223"
+                "driver" => "Пилот"
+                "driver_2" => "Пилот 2"
+                "price" => "3102"
+                "price_child" => "3102"
+                "price_bag" => "3122"
+                "depart_time" => "08:45"
+                "arrival_time" => "10:35"
+                "departure_date" => "01.03.22"
+                "arrival_date" => "01.03.22"
                 "condition_tours" => "1"
+                "duration" => "1:50"
             ]
          */
 
@@ -101,4 +100,8 @@ class TravelController extends Controller
          *  @var string  backtime => null
          */
     }
+
+
+
+
 }

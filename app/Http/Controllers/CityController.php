@@ -12,6 +12,10 @@ class CityController extends Controller
         #$this->cities = DB::table('cities')->get();
     }
 
+    public function city ()
+    {
+
+    }
     public function exportCities($selected = "none")
     {
         foreach ($this->cities as $city) {

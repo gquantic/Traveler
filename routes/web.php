@@ -21,7 +21,7 @@ Route::view('/about', 'about')->name('about');
 Route::view('/composite-tickets', 'tickets.composite')->name('tickets.composite');
 Route::view('/help', 'help')->name('help');
 Route::view('/contacts', 'contacts')->name('contacts');
-Route::view('/review', 'tickets.review')->name('review');
+//Route::view('/review', 'tickets.review')->name('review');
 
 // Route::get('/make-road/{from}/{more}', function (\App\Http\Controllers\TravelController $travel,
 //                                                  App\Http\Controllers\CityController $cityController, $from, $more) {
@@ -44,7 +44,40 @@ Route::get('/order', [\App\Http\Controllers\TravelController::class, 'makeRoad']
 //})->name('make-road');
 
 Route::get('/road/make/{with}', function ($with) {
-    return view('tickets.composite', compact('with'));
+    /**
+     * ПОЛУЧАЕМ ДАННЫЕ
+     */
+
+    $ch = curl_init("http://ecupay.ru/api/tours/$with");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    $tickets = curl_exec($ch);
+    curl_close($ch);
+
+    $response = json_decode($tickets, true);
+    $ticket = $response['data'];
+
+    return view('tickets.composite', compact('with', 'ticket'));
+});
+
+
+Route::get('/road/make/order/{with}', function ($with) {
+    /**
+     * ПОЛУЧАЕМ ДАННЫЕ
+     */
+
+    $ch = curl_init("http://ecupay.ru/api/tours/$with");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_HEADER, false);
+    $tickets = curl_exec($ch);
+    curl_close($ch);
+
+    $response = json_decode($tickets, true);
+    $ticket = $response['data'];
+
+    return view('tickets.review', compact('with', 'ticket'));
 });
 
 Route::get('test', function (\App\Http\Controllers\ApiController $apiController) {

@@ -5,6 +5,19 @@
 @endsection
 
 @section('content')
+{{--    @dd(t)--}}
+    @php
+        $arrivalTime = explode(':', $ticket['arrival_time']);
+        $departTime = explode(':', $ticket['depart_time']);
+
+        $duration = explode(':', $ticket['duration']);
+        $durationDisplay = "{$duration[0]} часов";
+
+
+        if ($duration[1])
+            $durationDisplay = $durationDisplay . " {$duration[1]} минуты";
+    @endphp
+
     <style>
         .top-social li a {
             color: rgba(0,0,0,.5);
@@ -67,8 +80,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3 class="mb-0">Просмотр сборного рейса Москва - Витязево</h3>
-                    <span class="text-muted">Сборный рейс: Москва - Витязево</span>
+                    <h3 class="mb-0">Просмотр сборного рейса {{ $ticket['route_departure_address'] }} - {{ $ticket['route_arrival_address'] }}</h3>
+                    <span class="text-muted">Сборный рейс: {{ $ticket['route_departure_address'] }} - {{ $ticket['route_arrival_address'] }}</span>
                 </div>
             </div>
             <div class="row mt-5">
@@ -76,16 +89,16 @@
                     <div class="row">
                         <div class="col-2">
                             <h6 class="mb-0">Отбытие</h6>
-                            <h2 class="mb-0">10:55</h2>
-                            <span class="text-muted">HGK T2</span>
+                            <h2 class="mb-0">{{ $ticket['depart_time'] }}</h2>
+                            <span class="text-muted">{{ $ticket['route_depart_station'] }}</span>
                         </div>
-                        <div class="col-2 d-flex align-items-center ml-4">
+                        <div class="col-3 d-flex align-items-center" style="margin-left: 60px;">
                             <img src="/images/info-arrow.svg" alt="">
                         </div>
                         <div class="col-2">
                             <h6 class="mb-0">Прибытие</h6>
-                            <h2 class="mb-0">15:00</h2>
-                            <span class="text-muted">SIN T2</span>
+                            <h2 class="mb-0">{{ $ticket['arrival_time'] }}</h2>
+                            <span class="text-muted">{{ $ticket['route_arrival_station'] }}</span>
                         </div>
                     </div>
                     <div class="row">
@@ -96,22 +109,22 @@
                     <div class="row">
                         <div class="col-12">
                             <h5 class="mb-0" style="text-transform: none;">Время в пути</h5>
-                            <h3 style="color: #6E3FFF;font-weight: bolder;">5 часов 32 минуты</h3>
+                            <h3 style="color: #6E3FFF;font-weight: bolder;">{{ $durationDisplay }}</h3>
                         </div>
                         <div class="col-12 mt-3">
                             <h5 class="mb-0" style="text-transform: none;">Стоимость</h5>
-                            <h3 class="mb-0" style="color: #6E3FFF;font-weight: bolder;">5 860 руб.</h3>
+                            <h3 class="mb-0" style="color: #6E3FFF;font-weight: bolder;">{{ $ticket['price'] }} руб.</h3>
                         </div>
                         <div class="col-12" style="margin-top: 30px;">
-                            <button class="by-btn">Перейти к оформлению</button>
+                            <a href="/road/make/order/{{ $ticket['id'] }}" class="by-btn">Перейти к оформлению</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-12">
                     <div class="col-12 d-flex flex-row flex-wrap justify-content-around">
-                        <a href="/road/make/train/">
-                            <div class="card-race" style="background: #F92853;">
-                                <i class="icofont-train-line train"></i>
+                        <div class="card-race card-race-hover" style="background: #ffa500;">
+                            <a href="">
+                                <i class="icofont-car-alt-1 car white"></i>
 
                                 <h6>Минимальная цена</h6>
                                 <span>1500 руб.</span>
@@ -119,33 +132,39 @@
                                 <h6>Самый быстрый рейс:</h6>
                                 <span>12 часов</span>
 
-                                <div class="arrow">
-                                    <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
-                        <div class="card-race" style="background: #6D3EFF;">
-                            <a href="/road/make/avia/" class="text-white">
-                                <i class="icofont-airplane-alt avia"></i>
-
-                                <h6>Минимальная цена</h6>
-                                <span>1500 руб.</span>
-
-                                <h6>Самый быстрый рейс:</h6>
-                                <span>12 часов</span>
-
-                                <div class="arrow">
-                                    <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
-                                    </svg>
-                                </div>
                             </a>
                         </div>
-                        <a href="/road/make/bus/" style="margin-top: 15px;">
-                            <div class="card-race" style="background: #84C03B;">
-                                <i class="icofont-bus-alt-1 bus"></i>
+                        @switch($ticket['vehicle_type'])
+                            @case('РЖД')
+                            <div class="card-race" style="background: #f92853;">
+                                <a href="" class="text-white">
+                                    <i class="icofont-train-line train"></i>
+
+                                    <h6>Минимальная цена</h6>
+                                    <span>{{ $ticket['price'] }} руб.</span>
+
+                                    <h6>Самый быстрый рейс:</h6>
+                                    <span>{{ $durationDisplay }}</span>
+                                </a>
+                            </div>
+                            @break
+                        @case('Авиа')
+                            <div class="card-race card-race-hover" style="background: #6D3EFF;">
+                                <a href="" class="text-white">
+                                    <i class="icofont-airplane-alt avia white"></i>
+
+                                    <h6>Минимальная цена</h6>
+                                    <span>{{ $ticket['price'] }} руб.</span>
+
+                                    <h6>Самый быстрый рейс:</h6>
+                                    <span>{{ $durationDisplay }}</span>
+                                </a>
+                            </div>
+                        @break
+                        @endswitch
+                        <div class="card-race card-race-hover mt-3" style="background: #ffa500;">
+                            <a href="">
+                                <i class="icofont-car-alt-1 car white"></i>
 
                                 <h6>Минимальная цена</h6>
                                 <span>1500 руб.</span>
@@ -153,13 +172,8 @@
                                 <h6>Самый быстрый рейс:</h6>
                                 <span>12 часов</span>
 
-                                <div class="arrow">
-                                    <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20.2361 12L0.236069 0.452994V23.547L20.2361 12Z" fill="white"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
